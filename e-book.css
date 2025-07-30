@@ -467,3 +467,64 @@ body, html {
     text-align: justify !important;
   }
 }
+@media (max-width: 700px) {
+  body, html {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow-x: hidden !important;
+    width: 100vw !important;
+  }
+  .container {
+    padding: 0 !important;
+    margin: 0 auto !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+  .topbar {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-radius: 0 0 14px 14px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    justify-content: center !important;
+    background: rgba(16,23,39,0.92) !important; /* leve transparência */
+    overflow-x: auto !important;
+  }
+  .nav-links {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    width: 100vw !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+  }
+  .lang-flags {
+    margin-left: 0 !important;
+    gap: 8px !important;
+  }
+  .benefits, .reviews {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100vw !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+  .benefit-card, .review-card {
+    box-sizing: border-box !important;
+    max-width: 96vw !important;
+    min-width: 0 !important;
+    margin: 0 auto 18px auto !important;
+  }
+  .about-card {
+    max-width: 97vw !important;
+    box-sizing: border-box !important;
+    margin: 18px auto !important;
+    padding: 13px 2vw 17px 2vw !important;
+  }
+}
