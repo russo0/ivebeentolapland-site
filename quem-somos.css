@@ -134,6 +134,7 @@
 .about-page .cta-final {
   margin: 58px auto 0 auto;
   text-align: center;
+  color: #fff;
 }
 .about-page .cta-btn {
   background: linear-gradient(90deg,#21c287,#14a6ea 60%,#6847d3 100%);
