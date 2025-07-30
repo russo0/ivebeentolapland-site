@@ -1,0 +1,189 @@
+/* ==========================
+   GLOBAL: Topbar, Footer, etc
+   ========================== */
+body {
+  margin: 0;
+  padding: 0;
+  background: #111928;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px 40px 10px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto 32px auto;
+  padding: 22px 0 0 0;
+  box-sizing: border-box;
+  gap: 32px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav-links a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.13em;
+  letter-spacing: 0.01em;
+  transition: color 0.16s;
+  display: inline-block;
+  padding: 6px 0;
+}
+.nav-links a:not(:last-child)::after {
+  content: "|";
+  color: #3ae374;
+  margin-left: 10px;
+  font-weight: 600;
+  opacity: 0.85;
+  font-size: 1em;
+}
+.nav-links a:hover { color: #3ae374; }
+.lang-flags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 13px;
+}
+.lang-flags img {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 1px 5px #1126;
+  transition: transform .15s;
+}
+.lang-flags img:hover { transform: scale(1.13); }
+
+/* Footer e CTA padrão */
+.cta-final {
+  margin: 58px auto 0 auto;
+  text-align: center;
+}
+.cta-btn {
+  background: linear-gradient(90deg,#21c287,#14a6ea 60%,#6847d3 100%);
+  color: #fff;
+  border: none;
+  font-size: 1.19em;
+  padding: 14px 38px;
+  border-radius: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 18px #111a;
+  transition: opacity .2s, transform .18s;
+  margin-top: 18px;
+  display: inline-block;
+}
+.cta-btn:hover { opacity:0.9; transform:scale(1.03) translateY(-2px); }
+.footer {
+  text-align: center;
+  color: #bbb;
+  font-size: .98em;
+  margin-top: 48px;
+  padding: 24px 2px 19px 2px;
+}
+
+/* ==========================
+   HOME PAGE EXCLUSIVO
+   ========================== */
+.home-page .home-hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 30px 0 18px 0;
+}
+.home-page .home-books {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3vw;
+  width: 100%;
+}
+.home-page .book-cover {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 6px 26px #0008;
+}
+.home-page .home-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 22px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.home-page .about-photo-img,
+.home-page .profile-pic {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 22px #111b;
+  border: 6px solid #243c62;
+  margin-bottom: 15px;
+}
+.home-page .home-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 410px;
+  margin: 30px auto 20px auto;
+  box-sizing: border-box;
+}
+.home-page .cta-btn-bright {
+  width: 100%;
+  text-align: center;
+  font-size: 1.08em;
+  border-radius: 17px;
+  margin: 0;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #17888f 0%, #37baa9 100%);
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: bold;
+  padding: 17px 8px;
+  box-shadow: 0 4px 16px #0003;
+  border: none;
+  letter-spacing: 0.7px;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  text-shadow: 0 2px 6px #093b3490;
+}
+.home-page .cta-btn-bright:hover {
+  background: linear-gradient(90deg, #31c6ad 0%, #19976a 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+}
+/* Fade-in padrão (pode usar para as capas) */
+.fade-in-fast {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: fadeInAnim 2s cubic-bezier(.57,.17,.14,1.04) forwards;
+}
+@keyframes fadeInAnim {
+  from { opacity: 0; transform: translateY(28px);}
+  to   { opacity: 1; transform: none;}
+}
+/* Fade-in mais lento (pode usar para sua foto) */
+.fade-in-slow {
+  opacity: 0;
+  transform: scale(0.94) translateY(34px);
+  animation: fadeInProfile 4s cubic-bezier(.57,.17,.14,1.04) forwards;
+}
+@keyframes fadeInProfile {
+  from { opacity: 0; transform: scale(0.94) translateY(34px);}
+  to   { opacity: 1; transform: scale(1) translateY(0);}
+}
