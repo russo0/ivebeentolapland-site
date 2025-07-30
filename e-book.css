@@ -616,3 +616,13 @@ body, html {
     justify-content: center !important;
   }
 }
+@media (max-width: 700px) {
+  .benefit-card {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+  .benefit-card h3 {
+    text-align: left !important;
+    width: 100%;
+  }
+}
