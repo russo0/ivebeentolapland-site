@@ -310,6 +310,6 @@ body {
 }
 @media (max-width: 900px) {
   body {
-    background: #e63535 !important; /* vermelho berrante só para testar! */
+    background: #ff0000 !important;
   }
 }
