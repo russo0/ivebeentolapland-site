@@ -1,128 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JGXX7C10MP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-JGXX7C10MP');
-  </script>
-  <title>Desvendando os Segredos da Aurora Boreal | E-book para ver e fotografar a aurora</title>
-  <meta name="description" content="Guia prático criado por quem mora no Ártico: aprenda a ver e fotografar a aurora boreal, quando ir, onde ir, dicas de viagem e equipamentos.">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS PRINCIPAL -->
+  <title>Desvendando os Segredos da Aurora Boreal | E-book para ver e fotografar a aurora</title>
+  <meta name="description" content="Guia prático criado por quem mora no Ártico: aprenda a ver e fotografar a aurora boreal, quando ir, onde ir, dicas de viagem e equipamentos.">
   <link rel="stylesheet" href="ebook.css">
-  <style>
-    /* VIDEO DE FUNDO */
-    .video-bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      z-index: 0;
-      pointer-events: none;
-    }
-    #video-fundo {
-      position: absolute;
-      top: 50%; left: 50%;
-      width: 177.77vh;
-      height: 100vh;
-      min-width: 100vw;
-      min-height: 56.25vw;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      pointer-events: none;
-      filter: brightness(0.8) blur(0.2px);
-      border: none;
-      background: #000;
-      display: block;
-      z-index: 0;
-    }
-    .video-bg .video-overlay {
-      position: absolute;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      background: linear-gradient(180deg, rgba(9,16,32,0.13) 0%, rgba(9,16,32,0.23) 100%);
-      z-index: 1;
-      pointer-events: none;
-    }
-    /* TRANSPARÊNCIA EM CARDS */
-    .ebook-page .ebook-hero-card,
-    .ebook-page .benefit-card,
-    .ebook-page .review-card,
-    .ebook-page .about-card,
-    .ebook-page .cta-final,
-    .ebook-page .footer {
-      background: rgba(22,27,41,0.22);
-      backdrop-filter: blur(1.5px);
-      -webkit-backdrop-filter: blur(1.5px);
-      border-radius: 22px;
-      box-shadow: 0 8px 36px #0009;
-      border: 1.5px solid #3ae37433;
-      z-index: 2;
-      position: relative;
-      color: #fff;
-    }
-    .ebook-page .hero-title {
-      background: rgba(9,20,38,0.5);
-      border-radius: 12px;
-      padding: 0.7em 1em;
-      color: #fff;
-      text-shadow: 0 4px 18px #000b, 0 1px 1px #2b4f5d;
-      margin-bottom: 18px;
-      display: inline-block;
-    }
-    /* SOBRESCREVE QUALQUER COR ESCURA EM TEXTO */
-    .ebook-page, .ebook-page * {
-      color: #fff;
-    }
-    .ebook-page .emoji {
-      font-size: 2em;
-      filter: drop-shadow(0 2px 6px #1119);
-    }
-    .ebook-page .benefits,
-    .ebook-page .reviews {
-      gap: 18px;
-    }
-    .ebook-page .benefit-card,
-    .ebook-page .review-card {
-      margin: 0 0 12px 0;
-    }
-    .ebook-page .topbar {
-      background: rgba(13, 19, 32, 0.73);
-      box-shadow: 0 3px 12px #0005;
-      border-radius: 0 0 14px 14px;
-      z-index: 3;
-      position: relative;
-      transition: background 0.2s;
-    }
-    @media (max-width: 900px) {
-      .ebook-page .ebook-hero-card,
-      .ebook-page .about-card {
-        flex-direction: column;
-        max-width: 97vw;
-        margin: 16vw auto 0 auto;
-        padding: 18px 4vw;
-        gap: 18px;
-      }
-      .ebook-page .benefits,
-      .ebook-page .reviews {
-        flex-direction: column;
-        gap: 14px;
-      }
-      .ebook-page .benefit-card,
-      .ebook-page .review-card {
-        margin: 0;
-        width: 100%;
-        box-sizing: border-box;
-      }
-    }
-  </style>
 </head>
-<body>
+<body class="ebook-page">
   <!-- VÍDEO DE FUNDO -->
   <div class="video-bg">
     <iframe id="video-fundo"
@@ -134,30 +19,28 @@
       tabindex="-1"></iframe>
     <div class="video-overlay"></div>
   </div>
-
-  <!-- ========== HTML PRINCIPAL ========== -->
-  <div class="container ebook-page">
-    <!-- Barra de navegação -->
+  <div class="container">
+    <!-- TOPBAR -->
     <div class="topbar">
       <div class="nav-links">
-        <a href="/index.html">Home</a>
-        <a href="/e-book.html">E-book</a>
-        <a href="/galeria.html">Galeria</a>
-        <a href="/quem-somos.html">Quem Somos</a>
-        <a href="/reviews.html">Reviews</a>
+        <a href="index.html">Home</a>
+        <a href="e-book.html">E-book</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="quem-somos.html">Quem Somos</a>
+        <a href="reviews.html">Reviews</a>
         <a href="https://app.ivebeentolapland.space" target="_blank">App</a>
         <a href="mailto:ivebeentolapland@gmail.com">Contato</a>
       </div>
       <div class="lang-flags">
-        <a href="/e-book.html" title="Português">
+        <a href="e-book.html" title="Português">
           <img src="https://img.icons8.com/color/32/brazil-circular.png" alt="PT">
         </a>
-        <a href="/en-ebook.html" title="English">
+        <a href="en-ebook.html" title="English">
           <img src="https://img.icons8.com/color/32/great-britain-circular.png" alt="EN">
         </a>
       </div>
     </div>
-    <!-- HERO: Título, subtítulo, call to action -->
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-title fade-in-fast">
         Desvendando os Segredos da Aurora Boreal
@@ -168,8 +51,7 @@
         </div>
         <div class="ebook-hero-content">
           <div class="hero-desc">
-            O guia prático e direto para realizar o sonho de ver (e fotografar!) a aurora boreal na Lapônia
-            <br><br>
+            O guia prático e direto para realizar o sonho de ver (e fotografar!) a aurora boreal na Lapônia. <br><br>
             Aprenda as melhores épocas, destinos e técnicas para registrar e "prever" a aurora mesmo como iniciante. Tudo com dicas reais de quem já vive no Ártico.
           </div>
           <a href="https://pay.hotmart.com/E93954148N" class="hero-btn">Quero meu e-book!</a>
@@ -179,10 +61,11 @@
     <!-- Selo de confiança -->
     <div class="social-proof">
       <span class="social-proof-badge">
-        <span class="stars">★★★★★</span> Mais de 40 leitores satisfeitos em 7 países
+        <span class="stars">★★★★★</span>
+        Mais de 40 leitores satisfeitos em 7 países
       </span>
     </div>
-    <!-- Benefícios (4 cards) -->
+    <!-- Benefícios -->
     <div class="benefits">
       <div class="benefit-card">
         <span class="emoji">📅</span>
@@ -205,36 +88,23 @@
         Como se preparar para encarar o frio do Ártico, o que vestir, acessórios indispensáveis e dicas para não passar aperto no Ártico.
       </div>
     </div>
-    <!-- Depoimentos de leitores -->
-    <div class="reviews-title">
-      O que dizem os leitores:
-    </div>
+    <!-- Depoimentos -->
+    <div class="reviews-title">O que dizem os leitores:</div>
     <div class="reviews">
-      <div class="review-card">
-        <span class="stars">★★★★★</span> O conteúdo é claro e envolvente. Aprendi sobre o fenômeno e recebi dicas práticas para planejar minha viagem. Recomendo muito! <span class="author">Soni L. - São Paulo, Brasil</span>
-      </div>
-      <div class="review-card">
-        <span class="stars">★★★★★</span> Muito detalhado, com tudo que eu precisava para minha viagem. Já estou pronta para explorar a Lapônia e ver a aurora boreal! <span class="author">Maria R. - São Paulo, Brasil</span>
-      </div>
-      <div class="review-card">
-        <span class="stars">★★★★★</span> Fiquei impressionado com o quão completo é o livro. Nunca vi uma aurora, mas agora me sinto preparado — e motivado — para viver essa aventura! <span class="author">Rafael G. - Eindhoven, Holanda</span>
-      </div>
-      <div class="review-card">
-        <span class="stars">★★★★★</span> Sempre quis saber mais sobre a aurora boreal, mas não fazia ideia de quanta ciência existe! Os autores explicam tudo de forma divertida, simples e compartilham dicas valiosas para presenciar o fenômeno. <span class="author">Maurício B. - Lucca, Itália</span>
-      </div>
-      <div class="review-card">
-        <span class="stars">★★★★★</span> Ler ‘Desvendando os Segredos da Aurora Boreal’ foi como viajar com a Naty e o Alex. Cada detalhe foi pensado com carinho — dá vontade de arrumar as malas pro Ártico! <span class="author">Giovanna M. - Bruxelas, Bélgica</span>
-      </div>
-      <div class="review-card">
-        <span class="stars">★★★★★</span> Ótimo conteúdo. Me preparando para novas aventuras! <span class="author">Paulo A. - Porto, Portugal</span>
-      </div>
+      <div class="review-card"><span class="stars">★★★★★</span> O conteúdo é claro e envolvente. Aprendi sobre o fenômeno e recebi dicas práticas para planejar minha viagem. Recomendo muito! <span class="author">Soni L. - São Paulo, Brasil</span></div>
+      <div class="review-card"><span class="stars">★★★★★</span> Muito detalhado, com tudo que eu precisava para minha viagem. Já estou pronta para explorar a Lapônia e ver a aurora boreal! <span class="author">Maria R. - São Paulo, Brasil</span></div>
+      <div class="review-card"><span class="stars">★★★★★</span> Fiquei impressionado com o quão completo é o livro. Nunca vi uma aurora, mas agora me sinto preparado — e motivado — para viver essa aventura! <span class="author">Rafael G. - Eindhoven, Holanda</span></div>
+      <div class="review-card"><span class="stars">★★★★★</span> Sempre quis saber mais sobre a aurora boreal, mas não fazia ideia de quanta ciência existe! Os autores explicam tudo de forma divertida, simples e compartilham dicas valiosas para presenciar o fenômeno. <span class="author">Maurício B. - Lucca, Itália</span></div>
+      <div class="review-card"><span class="stars">★★★★★</span> Ler ‘Desvendando os Segredos da Aurora Boreal’ foi como viajar com a Naty e o Alex. Cada detalhe foi pensado com carinho — dá vontade de arrumar as malas pro Ártico! <span class="author">Giovanna M. - Bruxelas, Bélgica</span></div>
+      <div class="review-card"><span class="stars">★★★★★</span> Ótimo conteúdo. Me preparando para novas aventuras! <span class="author">Paulo A. - Porto, Portugal</span></div>
     </div>
     <!-- Card Quem Somos -->
     <div class="about-card">
       <div class="about-content">
         <h1>Quem Somos</h1>
         <p><b>Somos Alex e Naty Correia</b> — um casal apaixonado pela aurora boreal!<br>
-        Depois de anos viajando para a Lapônia em busca do fenômeno, deixamos tudo para trás na Holanda e nos mudamos para o coração da Lapônia sueca, onde caçar auroras virou parte da rotina (ou melhor, das nossas noites!).</p>
+          Depois de anos viajando para a Lapônia em busca do fenômeno, deixamos tudo para trás na Holanda e nos mudamos para o coração da Lapônia sueca, onde caçar auroras virou parte da rotina (ou melhor, das nossas noites!).
+        </p>
         <p>
           Descobrimos que não existe nada mais mágico do que ver o céu acendendo em verde, rosa e vermelho sobre as florestas nevadas. Foi essa experiência que nos motivou a criar este e-book: para ajudar mais pessoas a realizar esse sonho, com dicas reais, roteiros detalhados e tudo o que aprendemos na prática — agora como locais no Ártico.
         </p>
@@ -256,7 +126,7 @@
     </div>
     <!-- CTA FINAL -->
     <div class="cta-final">
-      <div style="font-size:1.22em; font-weight:700; margin-bottom:8px; color: #fff;">
+      <div style="font-size:1.22em; font-weight:700; margin-bottom:8px;">
         Pronto para viver a aventura mais inesquecível do Ártico?
       </div>
       <a href="https://pay.hotmart.com/E93954148N" class="cta-btn">Quero meu e-book!</a>
@@ -267,17 +137,17 @@
       <br> Todas as imagens e textos são protegidos por direitos autorais.
     </div>
   </div>
-
-  <!-- Script para trocar vídeo desktop/mobile -->
+  <!-- SCRIPT PARA TROCAR O VÍDEO CONFORME O DISPOSITIVO -->
   <script>
-    function setVideo() {
-      const isMobile = window.matchMedia("(max-width: 700px)").matches;
+    window.addEventListener('DOMContentLoaded', function() {
+      // URLs dos vídeos (com parâmetros Vimeo)
       const desktopVideo = "https://player.vimeo.com/video/1105489099?background=1&autoplay=1&loop=1&muted=1&controls=0";
       const mobileVideo  = "https://player.vimeo.com/video/1105865708?background=1&autoplay=1&loop=1&muted=1&controls=0";
+      // Detecta se é mobile (700px de largura ou menos)
+      const isMobile = window.matchMedia("(max-width: 700px)").matches;
+      // Troca o src do iframe conforme o dispositivo
       document.getElementById('video-fundo').src = isMobile ? mobileVideo : desktopVideo;
-    }
-    window.addEventListener('DOMContentLoaded', setVideo);
-    window.addEventListener('resize', setVideo);
+    });
   </script>
 </body>
 </html>
