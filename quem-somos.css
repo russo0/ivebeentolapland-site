@@ -46,11 +46,9 @@ body {
 }
 
 .about-page .container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 10px 40px 10px;
-  position: relative;
-  z-index: 2;
+  max-width: 100vw !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
 }
 
 /* Topbar — translúcido! */
