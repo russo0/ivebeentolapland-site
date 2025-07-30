@@ -308,3 +308,8 @@ body {
   color: #fff889 !important;
   text-decoration: underline;
 }
+@media (max-width: 900px) {
+  body {
+    background: #e63535 !important; /* vermelho berrante só para testar! */
+  }
+}
