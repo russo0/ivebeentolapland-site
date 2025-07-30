@@ -84,7 +84,6 @@ body {
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   z-index: 0;
   pointer-events: none;
 }
@@ -261,20 +260,21 @@ body {
    ========================== */
 @media (max-width: 900px) {
   .about-page .topbar {
-    background: rgba(18, 23, 38, 0.83);
-    box-shadow: 0 3px 12px #0004;
-    border-radius: 0 0 16px 16px;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    margin-bottom: 16px;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 0 0 0;
-    width: 100vw;
-    min-width: 100vw;
-    box-sizing: border-box;
+    background: rgba(18, 23, 38, 0.80) !important;
+    box-shadow: 0 3px 12px #0004 !important;
+    border-radius: 0 0 16px 16px !important;
+    backdrop-filter: blur(3px) !important;
+    -webkit-backdrop-filter: blur(3px) !important;
+    margin-bottom: 16px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 14px 0 0 0 !important;
+    width: 100vw !important;
+    min-width: 100vw !important;
+    box-sizing: border-box !important;
   }
+}
   .about-page .nav-links {
     flex-wrap: wrap;
     justify-content: center;
