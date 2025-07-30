@@ -219,131 +219,50 @@ body {
 
 /* Responsivo */
 @media (max-width: 900px) {
+  /* Card principal em coluna */
   .about-page .about-card {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 6vw 20px 6vw;
-    gap: 16px;
-    max-width: 96vw;
-    margin-top: 16vw;
-  }
-  .about-page .about-content {
-    text-align: left; /* Alinhado à esquerda */
-    width: 100%;
-  }
-  .about-page .about-photo {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 18px;
-    order: -1; /* Traz a foto para o topo */
-  }
-  .about-page .about-photo img { width: 110px; height: 110px; border-width: 4px;}
-  .about-page .about-btn-wrap { justify-content: flex-start; }
-  .about-page .topbar {
-    flex-direction: column;
-    gap: 12px;
-    padding: 16px 0 0 0;
-    width: 100vw;
-    min-width: 100vw;
-    box-sizing: border-box;
-    align-items: flex-start;
-  }
-  .about-page .nav-links {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 8px;
-    width: 100vw;
-    font-size: 0.98em;
-  }
-}
-
-@media (max-width: 540px) {
-  .about-page .about-card { padding: 15px 4vw; }
-  .about-page .about-photo img { width: 80px; height: 80px;}
-  .about-page .about-content h1 { font-size: 1.03rem;}
-  .about-page .cta-btn, 
-  .about-page .cta-btn-bright { 
-    font-size: 1em; 
-    border-radius: 12px; 
-    padding: 12px 0; 
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-  }
-  .about-page .topbar {
-    gap: 6px;
-    padding: 10px 0 0 0;
-  }
-  .about-page .nav-links {
-    gap: 5px;
-    font-size: 0.93em;
-  }
-}
-/* Garante o vídeo de fundo certinho no mobile */
-.about-page .video-bg, 
-.about-page .video-bg iframe, 
-.about-page .video-bg .video-overlay {
-  width: 100vw;
-  height: 100vh;
-  min-width: 100vw;
-  min-height: 100vh;
-  max-width: 100vw;
-  max-height: 100vh;
-  left: 0;
-  top: 0;
-  position: fixed;
-  object-fit: cover;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Deixa o link do Instagram mais visível */
-.about-page .contact a[href*="instagram"] {
-  color: #3ae374 !important;
-  font-weight: bold;
-  text-shadow: 0 1px 4px #191c2e90;
-}
-.about-page .contact a[href*="instagram"]:hover {
-  color: #fff889 !important;
-  text-decoration: underline;
-}
-@media (max-width: 900px) {
-  body {
-    background: #ff0000 !important;
-  }
-}
-@media (max-width: 900px) {
-  .about-page .about-card {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Centraliza tudo */
     padding: 20px 6vw 20px 6vw;
     gap: 16px;
     max-width: 96vw;
     margin-top: 14vw;
   }
+  /* Foto centralizada no topo */
   .about-page .about-photo {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center; /* Centraliza a foto */
     margin-bottom: 18px;
-    order: -1; /* Traz a foto para o topo */
+    order: -1;
   }
   .about-page .about-photo img {
     width: 110px;
     height: 110px;
     border-width: 4px;
   }
+  /* Texto à esquerda, mas botões centralizados */
   .about-page .about-content {
-    text-align: left; /* Alinhado à esquerda */
+    text-align: left;
     width: 100%;
   }
   .about-page .about-content h1 {
     font-size: 1.18rem;
+    text-align: center;
   }
+  /* Botão centralizado */
   .about-page .about-btn-wrap {
-    justify-content: flex-start;
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
   }
+  .about-page .cta-btn-bright {
+    display: inline-block;
+    text-align: center !important;
+    margin: 0 auto;
+  }
+  /* Topbar centralizada e empilhada */
   .about-page .topbar {
     flex-direction: column;
     gap: 8px;
@@ -351,11 +270,11 @@ body {
     width: 100vw;
     min-width: 100vw;
     box-sizing: border-box;
-    align-items: flex-start;
+    align-items: center; /* Centraliza a topbar */
   }
   .about-page .nav-links {
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 6px;
     width: 100vw;
     font-size: 1em;
@@ -379,6 +298,7 @@ body {
     width: 100%;
     min-width: 0;
     box-sizing: border-box;
+    text-align: center !important;
   }
   .about-page .topbar {
     gap: 4px;
@@ -390,22 +310,23 @@ body {
   }
 }
 
-/* Garante o vídeo de fundo certinho no mobile */
+/* Video ocupa toda a tela SEM FUNDO VERMELHO */
 .about-page .video-bg, 
 .about-page .video-bg iframe, 
 .about-page .video-bg .video-overlay {
-  width: 100vw;
-  height: 100vh;
-  min-width: 100vw;
-  min-height: 100vh;
-  max-width: 100vw;
-  max-height: 100vh;
-  left: 0;
-  top: 0;
-  position: fixed;
-  object-fit: cover;
+  width: 100vw !important;
+  height: 100vh !important;
+  min-width: 100vw !important;
+  min-height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  left: 0 !important;
+  top: 0 !important;
+  position: fixed !important;
+  object-fit: cover !important;
   pointer-events: none;
   z-index: 0;
+  background: transparent !important;
 }
 
 /* Deixa o link do Instagram mais visível */
@@ -417,4 +338,9 @@ body {
 .about-page .contact a[href*="instagram"]:hover {
   color: #fff889 !important;
   text-decoration: underline;
+}
+
+/* Remove fundo vermelho de teste (caso tenha ficado) */
+body {
+  background: #111928 !important;
 }
