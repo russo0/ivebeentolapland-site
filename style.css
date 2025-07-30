@@ -1,0 +1,1414 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /* ==========================\
+   GLOBAL: Topbar, Footer, etc\
+   ========================== */\
+\
+body \{\
+  margin: 0;\
+  padding: 0;\
+  background: #111928;\
+  color: #fff;\
+  font-family: 'Segoe UI', Arial, sans-serif;\
+\}\
+\
+.container \{\
+  max-width: 900px;\
+  margin: 0 auto;\
+  padding: 0 10px 40px 10px;\
+\}\
+\
+.topbar \{\
+  display: flex;\
+  justify-content: center;\
+  align-items: center;\
+  width: 100%;\
+  margin: 0 auto 32px auto;\
+  padding: 22px 0 0 0;\
+  box-sizing: border-box;\
+  gap: 32px;\
+\}\
+.nav-links \{\
+  display: flex;\
+  align-items: center;\
+  gap: 12px;\
+\}\
+.nav-links a \{\
+  color: #fff;\
+  font-weight: 700;\
+  text-decoration: none;\
+  font-size: 1.13em;\
+  letter-spacing: 0.01em;\
+  transition: color 0.16s;\
+  display: inline-block;\
+  padding: 6px 0;\
+\}\
+.nav-links a:not(:last-child)::after \{\
+  content: "|";\
+  color: #3ae374;\
+  margin-left: 10px;\
+  font-weight: 600;\
+  opacity: 0.85;\
+  font-size: 1em;\
+\}\
+.nav-links a:hover \{ color: #3ae374; \}\
+.lang-flags \{\
+  display: flex;\
+  align-items: center;\
+  gap: 10px;\
+  margin-left: 13px;\
+\}\
+.lang-flags img \{\
+  border-radius: 50%;\
+  width: 32px;\
+  height: 32px;\
+  box-shadow: 0 1px 5px #1126;\
+  transition: transform .15s;\
+\}\
+.lang-flags img:hover \{ transform: scale(1.13); \}\
+\
+/* Footer e CTA padr\'e3o */\
+.cta-final \{\
+  margin: 58px auto 0 auto;\
+  text-align: center;\
+\}\
+.cta-btn \{\
+  background: linear-gradient(90deg,#21c287,#14a6ea 60%,#6847d3 100%);\
+  color: #fff;\
+  border: none;\
+  font-size: 1.19em;\
+  padding: 14px 38px;\
+  border-radius: 22px;\
+  font-weight: 700;\
+  text-decoration: none;\
+  box-shadow: 0 4px 18px #111a;\
+  transition: opacity .2s, transform .18s;\
+  margin-top: 18px;\
+  display: inline-block;\
+\}\
+.cta-btn:hover \{ opacity:0.9; transform:scale(1.03) translateY(-2px); \}\
+.footer \{\
+  text-align: center;\
+  color: #bbb;\
+  font-size: .98em;\
+  margin-top: 48px;\
+  padding: 24px 2px 19px 2px;\
+\}\
+/* ==========================\
+   BOTAO DOURADO\
+   ========================== */\
+.cta-btn-gold, .cta-btn.cta-btn-gold \{\
+  color: #111 !important;\
+  text-shadow: none !important;\
+\}\
+.cta-btn-gold \{\
+  background: linear-gradient(90deg, #ffae00 0%, #ffe100 100%);\
+  color: #111 !important;    /* PRETO */\
+  box-shadow: 0 4px 24px #ffae0040, 0 1px 3px #ffe10022;\
+  text-shadow: none;\
+  border: none;\
+  font-weight: 800;\
+  border-radius: 22px;\
+  font-size: 1.19em;\
+  padding: 14px 38px;\
+  letter-spacing: 0.2px;\
+  transition: opacity .2s, transform .18s;\
+\}\
+\
+.cta-btn-gold:hover \{\
+  opacity: 0.96;\
+  transform: scale(1.04) translateY(-2px);\
+  filter: brightness(1.09);\
+\}\
+\
+\
+/* ==========================\
+   HOME PAGE EXCLUSIVO\
+   ========================== */\
+.home-page .home-hero \{\
+  width: 100%;\
+  display: flex;\
+  justify-content: center;\
+  align-items: flex-end;\
+  margin: 30px 0 18px 0;\
+\}\
+.home-page .home-books \{\
+  display: flex;\
+  flex-direction: row;\
+  justify-content: center;\
+  align-items: flex-end;\
+  gap: 3vw;\
+  width: 100%;\
+\}\
+.home-page .book-cover \{\
+  width: 100%;\
+  max-width: 300px;\
+  border-radius: 15px;\
+  box-shadow: 0 6px 26px #0008;\
+\}\
+.home-page .home-profile \{\
+  display: flex;\
+  flex-direction: column;\
+  align-items: center;\
+  margin-bottom: 22px;\
+  margin-left: 12px;\
+  margin-right: 12px;\
+\}\
+.home-page .profile-pic \{\
+  width: 130px;\
+  height: 130px;\
+  object-fit: cover;\
+  border-radius: 50%;\
+  box-shadow: 0 2px 22px #111b;\
+  border: 6px solid #243c62;\
+  margin-bottom: 15px;\
+\}\
+.home-page .home-buttons \{\
+  display: flex;\
+  flex-direction: column;\
+  align-items: center;\
+  gap: 14px;\
+  width: 100%;\
+  max-width: 410px;\
+  margin: 30px auto 20px auto;\
+  box-sizing: border-box;\
+\}\
+.home-page .cta-btn-bright \{\
+  width: 100%;\
+  text-align: center;\
+  font-size: 1.08em;\
+  border-radius: 17px;\
+  margin: 0;\
+  box-sizing: border-box;\
+  background: linear-gradient(90deg, #17888f 0%, #37baa9 100%);\
+  color: #fff;\
+  font-family: 'Segoe UI', Arial, sans-serif;\
+  font-weight: bold;\
+  padding: 17px 8px;\
+  box-shadow: 0 4px 16px #0003;\
+  border: none;\
+  letter-spacing: 0.7px;\
+  transition: background 0.2s, color 0.2s, transform 0.15s;\
+  text-shadow: 0 2px 6px #093b3490;\
+\}\
+.home-page .cta-btn-bright:hover \{\
+  background: linear-gradient(90deg, #31c6ad 0%, #19976a 100%);\
+  color: #fff;\
+  transform: translateY(-2px) scale(1.03);\
+\}\
+/* Fade-in padr\'e3o (pode usar para as capas) */\
+.fade-in-fast \{\
+  opacity: 0;\
+  transform: translateY(28px);\
+  animation: fadeInAnim 2s cubic-bezier(.57,.17,.14,1.04) forwards;\
+\}\
+\
+@keyframes fadeInAnim \{\
+  from \{ opacity: 0; transform: translateY(28px);\}\
+  to   \{ opacity: 1; transform: none;\}\
+\}\
+\
+/* Fade-in mais lento (pode usar para sua foto) */\
+.fade-in-slow \{\
+  opacity: 0;\
+  transform: scale(0.94) translateY(34px);\
+  animation: fadeInProfile 4s cubic-bezier(.57,.17,.14,1.04) forwards;\
+\}\
+\
+@keyframes fadeInProfile \{\
+  from \{ opacity: 0; transform: scale(0.94) translateY(34px);\}\
+  to   \{ opacity: 1; transform: scale(1) translateY(0);\}\
+\}\
+\
+/* ==========================\
+   EBOOK PAGE EXCLUSIVO\
+   ========================== */\
+.ebook-page .hero \{\
+  margin-top: 26px;\
+  margin-bottom: 36px;\
+  display: flex;\
+  flex-direction: column;\
+  align-items: center;\
+  width: 100%;\
+\}\
+.ebook-page .hero-title \{\
+  font-size: 2rem;\
+  font-weight: bold;\
+  margin-bottom: 22px;\
+  background: linear-gradient(90deg, #3ae374 0%, #17c0eb 55%, #7158e2 100%);\
+  -webkit-background-clip: text;\
+  -webkit-text-fill-color: transparent;\
+  background-clip: text;\
+  color: transparent;\
+  text-align: center;\
+  letter-spacing: 0.5px;\
+\}\
+.ebook-page .ebook-hero-card \{\
+  display: flex;\
+  flex-direction: row;\
+  background: rgba(28,40,64,0.95);\
+  border-radius: 24px;\
+  box-shadow: 0 7px 36px #101a4480;\
+  padding: 32px;\
+  gap: 32px;\
+  align-items: center;\
+  max-width: 720px;\
+  width: 720px;              /* largura fixa desktop */\
+  margin: 0 auto;\
+  box-sizing: border-box;\
+\}\
+.ebook-page .ebook-hero-img \{\
+  flex: 0 0 240px;\
+\}\
+.ebook-page .ebook-hero-img img.book-cover \{\
+  width: 220px;\
+  height: auto;\
+  border-radius: 16px;\
+\}\
+.ebook-page .ebook-hero-content \{\
+  flex: 1;\
+  display: flex;\
+  flex-direction: column;\
+  gap: 20px;\
+\}\
+.ebook-page .hero-desc \{\
+  font-size: 1.17em;\
+  color: #f0f0f0;\
+  line-height: 1.55;\
+  max-width: 400px;\
+\}\
+.ebook-page .hero-btn \{\
+  display: inline-block;\
+  background: linear-gradient(90deg,#21c287,#14a6ea 60%,#6847d3 100%);\
+  color: #fff;\
+  font-size: 1.13em;\
+  padding: 13px 32px;\
+  border-radius: 18px;\
+  font-weight: 700;\
+  text-decoration: none;\
+  box-shadow: 0 4px 14px #161e4980;\
+  transition: opacity .18s, transform .15s;\
+  margin-top: 4px;\
+  text-align: center;\
+  letter-spacing: 0.3px;\
+\}\
+.ebook-page .hero-btn:hover \{\
+  opacity: 0.94;\
+  transform: scale(1.03) translateY(-2px);\
+\}\
+.ebook-page .hero-img \{\
+  margin: 32px auto 0 auto;\
+  width: 320px; \
+  max-width: 98vw; \
+  border-radius: 16px;\
+  box-shadow: 0 8px 36px #121e49a6;\
+  display: block;\
+\}\
+.ebook-page .benefits,\
+.ebook-page .reviews \{\
+  display: flex;\
+  flex-wrap: wrap;\
+  gap: 24px;\
+  justify-content: center;\
+  align-items: stretch;\
+\}\
+.ebook-page .benefit-card \{\
+  background: rgba(40,60,90,0.97);\
+  border-radius: 16px;\
+  padding: 23px 21px 18px 21px;\
+  box-shadow: 0 2px 18px #0004;\
+  flex: 1 1 250px;\
+  min-width: 230px;\
+  max-width: 295px;\
+  text-align: center;\
+  color: #e8e8e8;\
+  display: flex;\
+  flex-direction: column;\
+  align-items: center;\
+\}\
+.ebook-page .benefit-card .emoji \{\
+  font-size: 2.2em;\
+  margin-bottom: 10px;\
+  display: block;\
+\}\
+.ebook-page .benefit-card h3 \{\
+  margin: 0 0 10px 0;\
+  font-size: 1.19em;\
+  font-weight: 900;\
+  color: #aaffd7 !important;\
+  letter-spacing: 0.5px;\
+  line-height: 1.23;\
+  text-shadow:\
+    0 3px 12px #151a40,\
+    0 2px 8px #21c0eb99,\
+    0 1px 6px #3ae37480;\
+\}\
+.ebook-page .reviews-title \{\
+  margin-top: 56px;\
+  margin-bottom: 17px;\
+  text-align: center;\
+  font-size: 1.25em;\
+  color: #c9f6e9;\
+  font-weight: bold;\
+  letter-spacing: 1px;\
+\}\
+.ebook-page .review-card \{\
+  background: linear-gradient(90deg,#3ae374 0%,#17c0eb 70%,#7158e2 100%);\
+  color: #fff;\
+  border-radius: 14px;\
+  box-shadow: 0 2px 12px #122a7e38;\
+  max-width: 350px; min-width: 210px;\
+  padding: 19px 19px 15px 19px;\
+  font-size: 1.08em;\
+  margin-bottom: 10px;\
+  position: relative;\
+  text-align: left;\
+  display: flex;\
+  flex-direction: column;\
+  align-items: flex-start;\
+\}\
+.ebook-page .review-card .stars \{\
+  color: #ffd700;\
+  font-size: 1.2em;\
+  margin-bottom: 7px;\
+  display: block;\
+  align-self: center;\
+  text-align: center;\
+  width: 100%;\
+\}\
+.ebook-page .review-card .author \{\
+  font-size: .96em;\
+  margin-top: 14px;\
+  color: #fffbe9;\
+  font-weight: 700;\
+  text-align: left;\
+  display: block;\
+\}\
+.ebook-page .about-card \{\
+  background: linear-gradient(90deg, #282e3a 0%, #243c62 70%, #1cb5e0 100%);\
+  max-width: 670px;\
+  margin: 40px auto 38px auto;\
+  padding: 26px 26px 22px 26px;\
+  border-radius: 34px;\
+  box-shadow: 0 9px 34px #000a;\
+  display: flex;\
+  align-items: center;\
+  gap: 28px;\
+  border: 1px solid #c5fff42c;\
+\}\
+.ebook-page .about-content \{\
+  flex: 2;\
+  color: #fff;\
+  text-align: left;\
+\}\
+.ebook-page .about-content h1 \{\
+  font-size: 1.23rem;\
+  letter-spacing: 1px;\
+  margin-bottom: 9px;\
+  font-weight: 800;\
+  text-align: center;\
+\}\
+.ebook-page .about-content p \{\
+  margin: 0 0 0.55em 0;\
+  font-size: 1.08em;\
+  line-height: 1.45;\
+  font-weight: 500;\
+\}\
+.ebook-page .about-content .contact \{\
+  margin: 1em 0 0.8em 0;\
+  font-size: 0.99em;\
+\}\
+.ebook-page .about-photo \{\
+  flex: 1;\
+  display: flex;\
+  align-items: center;\
+  justify-content: center;\
+  min-width: 120px;\
+  margin-left: 7px;\
+\}\
+.ebook-page .about-photo img \{\
+  width: 200px;\
+  height: 200px;\
+  border-radius: 50%;\
+  object-fit: cover;\
+  box-shadow: 0 4px 22px #0006;\
+  border: 5px solid #fff4;\
+\}\
+.ebook-page .about-btn-wrap \{\
+  width: 100%;\
+  display: flex;\
+  justify-content: center;\
+  margin: 1.1em 0 0 0;\
+\}\
+.ebook-page .cta-btn-bright \{\
+  display: inline-block;\
+  padding: 13px 40px;\
+  border: none;\
+  background: linear-gradient(90deg, #124957 0%, #1e887e 100%);\
+  color: #fff !important;\
+  border-radius: 9px;\
+  font-size: 1.15em !important;\
+  font-family: 'Segoe UI', Arial, sans-serif;\
+  font-weight: bold;\
+  box-shadow: 0 4px 16px #0003;\
+  cursor: pointer;\
+  transition: background 0.2s, color 0.2s, transform 0.15s;\
+  text-decoration: none;\
+  text-shadow: 0 2px 6px #093b3490;\
+  letter-spacing: 0.7px;\
+\}\
+.ebook-page .cta-btn-bright:hover \{\
+  background: linear-gradient(90deg, #19976a 0%, #31c6ad 100%);\
+  color: #fff;\
+  transform: translateY(-2px) scale(1.03);\
+\}\
+.ebook-page .book-cover-card \{\
+  background: #202b37;\
+  padding: 14px;\
+  border-radius: 18px;\
+  box-shadow: 0 8px 36px #121e49a6, 0 3px 12px #1626;\
+  margin: 32px auto 0 auto;\
+  width: 100%;\
+  max-width: 340px;\
+  display: flex;\
+  justify-content: center;\
+  box-sizing: border-box;\
+\}\
+.ebook-page .book-cover \{\
+  width: 100%;\
+  height: auto;\
+  border-radius: 12px;\
+  box-shadow: none;\
+  display: block;\
+\}\
+.ebook-page .social-proof \{\
+  display: flex;\
+  justify-content: center;\
+  align-items: center;\
+  margin: 22px 0 30px 0;\
+\}\
+\
+.ebook-page .social-proof-badge \{\
+  background: linear-gradient(90deg, #232e42 0%, #3ae374 60%, #17c0eb 100%);\
+  color: #222;\
+  border-radius: 20px;\
+  padding: 11px 24px 11px 18px;\
+  font-size: 1.09em;\
+  font-weight: bold;\
+  box-shadow: 0 2px 14px #1114;\
+  letter-spacing: 0.4px;\
+  display: flex;\
+  align-items: center;\
+  gap: 9px;\
+  animation: fadeInBadge 1.2s;\
+\}\
+\
+.ebook-page .stars \{\
+  color: #ffd700;\
+  font-size: 1.2em;\
+  letter-spacing: 2px;\
+  text-shadow: 0 2px 10px #fff7, 0 1px 6px #7158e2cc;\
+  font-weight: 800;\
+  margin-right: 8px;\
+  display: inline-block;\
+  animation: fadeInStars 2.2s;\
+\}\
+.ebook-hero-content .hero-desc \{\
+  text-align: left; /* ou 'justify' se quiser for\'e7ar as linhas at\'e9 o fim */\
+  font-size: 1.15em;\
+  line-height: 1.45;\
+  max-width: 440px;\
+  margin-left: 0;\
+  margin-right: 0;\
+  margin-bottom: 22px;\
+  margin-top: 10px;\
+  padding-right: 8px;\
+\}\
+/* Anima\'e7\'e3o */\
+@keyframes fadeInBadge \{\
+  from \{ opacity: 0; transform: translateY(-15px) scale(0.98);\}\
+  to \{ opacity: 1; transform: translateY(0) scale(1);\}\
+\}\
+@keyframes fadeInStars \{\
+  from \{ opacity: 0; filter: blur(2px);\}\
+  to   \{ opacity: 1; filter: blur(0);\}\
+\}\
+\
+/* MOBILE ajuste */\
+@media (max-width: 600px) \{\
+  .ebook-page .social-proof-badge \{\
+    padding: 10px 11px;\
+    font-size: 1em;\
+    border-radius: 13px;\
+  \}\
+\}\
+@media (max-width: 700px) \{\
+  .container \{\
+    max-width: 100vw !important;\
+    overflow-x: hidden !important;\
+    padding-left: 0 !important;\
+    padding-right: 0 !important;\
+  \}\
+\}\
+\
+@media (max-width: 700px) \{\
+  .ebook-page .ebook-hero-card \{\
+    flex-direction: column !important;\
+    align-items: center !important;\
+    justify-content: center !important;\
+    width: 95vw !important;         /* <--- menor que a tela */\
+    max-width: 95vw !important;\
+    min-width: 0 !important;\
+    margin: 0 auto !important;      /* centraliza certinho */\
+    border-radius: 19px !important; /* curvatura bonita */\
+    box-sizing: border-box !important;\
+    padding: 5vw 2vw 5vw 2vw !important;\
+    gap: 10px !important;\
+    overflow: visible !important;   /* permite o border-radius */\
+    background: rgba(28,40,64,0.95) !important; /* refor\'e7a bg */\
+  \}\
+  .ebook-page .ebook-hero-img img.book-cover \{\
+    width: 88vw !important;\
+    max-width: 300px !important;\
+    min-width: 0 !important;\
+    border-radius: 12px !important;\
+  \}\
+  .ebook-page .ebook-hero-content \{\
+    align-items: center !important;\
+    text-align: justify !important;\
+    font-size: 1.11em;\
+    line-height: 1.55;\
+    width: 92vw !important;\
+    max-width: 92vw !important;\
+    min-width: 0 !important;\
+    box-sizing: border-box !important;\
+  \}\
+  .ebook-page .hero-desc \{\
+    max-width: 91vw !important;\
+    text-align: justify;\
+    line-height: 1.55;\
+    font-size: 1.08em;\
+    margin: 0 auto;\
+    word-break: break-word !important;\
+  \}\
+  .ebook-page .hero-btn \{\
+    margin: 14px auto 0 auto !important;\
+    width: 80vw !important;\
+    min-width: 120px !important;\
+    max-width: 300px !important;\
+    font-size: 1.02em !important;\
+    padding: 13px 0 !important;\
+    display: block !important;\
+    text-align: center !important;\
+  \}\
+  body, .container \{\
+    padding: 0 !important;\
+    margin: 0 !important;\
+    overflow-x: hidden !important;\
+  \}\
+\}\
+@media (max-width: 700px) \{\
+  .ebook-page .about-card \{\
+    flex-direction: column !important;\
+    align-items: center !important;\
+    padding: 20px 3vw 20px 3vw !important;\
+    gap: 10px !important;\
+    max-width: 97vw !important;\
+    min-width: 0 !important;\
+  \}\
+  .ebook-page .about-photo \{\
+    order: -1 !important;\
+    width: 100% !important;\
+    display: flex !important;\
+    justify-content: center !important;\
+    margin-bottom: 18px !important;\
+  \}\
+  .ebook-page .about-photo img \{\
+    width: 120px !important;\
+    height: 120px !important;\
+    border-width: 4px !important;\
+    margin: 0 auto !important;\
+    display: block !important;\
+  \}\
+  .ebook-page .about-content \{\
+    width: 100% !important;\
+    margin: 0 !important;\
+    padding: 0 !important;\
+    order: 2 !important;\
+    text-align: justify !important;\
+  \}\
+  .ebook-page .about-btn-wrap \{\
+    width: 100% !important;\
+    display: flex !important;\
+    justify-content: center !important;\
+    margin: 1.2em 0 0 0 !important;\
+  \}\
+\}\
+@media (max-width: 700px) \{\
+  .ebook-page .about-card .about-btn-wrap a,\
+  .ebook-page .about-card .about-btn-wrap .cta-btn-bright \{\
+    width: 70vw !important;       /* Menor que o card, centralizado */\
+    max-width: 200px !important;  /* Opcional: limita em desktop pequeno */\
+    min-width: 110px !important;\
+    margin: 18px auto 0 auto !important;\
+    padding-left: 0 !important;\
+    padding-right: 0 !important;\
+    display: block !important;\
+    text-align: center !important;\
+    border-radius: 14px !important;\
+    font-size: 1.12em !important;\
+    box-sizing: border-box !important;\
+  \}\
+\}\
+@media (max-width: 700px) \{\
+  .ebook-page .hero-desc \{\
+    text-align: left !important;\
+    font-size: 0.97em !important;\
+    max-width: 95vw !important;\
+    margin: 0 !important;\
+    line-height: 1.5 !important;\
+  \}\
+\}\
+@media (max-width: 900px) \{\
+  .ebook-hero-content .hero-desc \{\
+    max-width: 97vw;\
+    font-size: 1em;\
+    margin: 0 0 14px 0;\
+    padding: 0;\
+  \}\
+\}\
+/* S\'f3 no desktop: texto justificado dentro dos cards de benef\'edcio */\
+.ebook-page .benefit-card \{\
+  text-align: justify;\
+\}\
+\
+/* S\'f3 o t\'edtulo continua centralizado */\
+.ebook-page .benefit-card h3 \{\
+  text-align: center;\
+  margin-bottom: 8px;\
+\}\
+\
+/* No mobile: texto \'e0 esquerda */\
+@media (max-width: 700px) \{\
+  .ebook-page .benefit-card \{\
+    text-align: left !important;\
+  \}\
+  .ebook-page .benefit-card h3 \{\
+    text-align: left !important;\
+  \}\
+\}\
+\
+/* ==========================\
+QUEM SOMOS PAGE EXCLUSIVO\
+========================== */\
+.about-page .about-card \{\
+  background: linear-gradient(90deg, #232e42 0%, #243c62 70%, #1cb5e0 100%);\
+  max-width: 770px;\
+  margin: 48px auto 38px auto;\
+  padding: 32px 36px 28px 36px;\
+  border-radius: 36px;\
+  box-shadow: 0 9px 34px #000b;\
+  display: flex;\
+  align-items: center;\
+  gap: 44px;\
+  border: 1.5px solid #c5fff433;\
+\}\
+\
+.about-page .about-content \{\
+  flex: 3;\
+  color: #fff;\
+  text-align: justify;\
+\}\
+\
+.about-page .about-content h1 \{\
+  font-size: 1.38rem;\
+  font-weight: 800;\
+  letter-spacing: 1.1px;\
+  margin-bottom: 14px;\
+  color: #3ae374;\
+  text-shadow: 0 3px 14px #111b;\
+  text-align: center;\
+\}\
+\
+.about-page .about-content p \{\
+  margin: 0 0 1.1em 0;\
+  font-size: 1.13em;\
+  line-height: 1.57;\
+  color: #e6e7e8;\
+  font-weight: 500;\
+\}\
+\
+.about-page .about-content .contact \{\
+  margin: 1.2em 0 1em 0;\
+  font-size: 1em;\
+  color: #b5ffec;\
+  font-weight: bold;\
+\}\
+\
+.about-page .about-btn-wrap \{\
+  width: 100%;\
+  display: flex;\
+  justify-content: center;\
+  margin: 1.2em 0 0 0;\
+\}\
+.about-page .cta-btn-bright \{\
+  display: inline-block;\
+  padding: 13px 40px;\
+  border: none;\
+  background: linear-gradient(90deg, #124957 0%, #1e887e 100%);\
+  color: #fff !important;\
+  border-radius: 9px;\
+  font-size: 1.13em !important;\
+  font-family: 'Segoe UI', Arial, sans-serif;\
+  font-weight: bold;\
+  box-shadow: 0 4px 16px #0003;\
+  cursor: pointer;\
+  transition: background 0.2s, color 0.2s, transform 0.15s;\
+  text-decoration: none;\
+  text-shadow: 0 2px 6px #093b3490;\
+  letter-spacing: 0.7px;\
+  \
+\}\
+.about-page .cta-btn-bright:hover \{\
+  background: linear-gradient(90deg, #19976a 0%, #31c6ad 100%);\
+  color: #fff;\
+  transform: translateY(-2px) scale(1.03);\
+\}\
+\
+.about-page .about-photo \{\
+  flex: 1;\
+  display: flex;\
+  justify-content: center;\
+  align-items: center;\
+  min-width: 120px;\
+  margin-left: 7px;\
+\}\
+.about-page .about-photo img \{\
+  width: 180px;\
+  height: 180px;\
+  border-radius: 50%;\
+  object-fit: cover;\
+  box-shadow: 0 4px 24px #0007;\
+  border: 6px solid #fff3;\
+\}\
+\
+@media (max-width: 900px) \{\
+  .about-page .about-card \{\
+    flex-direction: column;\
+    padding: 20px 6vw 20px 6vw;\
+    gap: 16px;\
+    max-width: 96vw;\
+    align-items: center;\
+  \}\
+  .about-page .about-content \{ text-align: center; \}\
+  .about-page .about-content h1 \{ font-size: 1.13rem; \}\
+  .about-page .about-photo img \{ width: 110px; height: 110px; border-width: 4px;\}\
+  .about-page .about-btn-wrap \{ justify-content: center; \}\
+\}\
+/* ==========================\
+   GALERIA PAGE EXCLUSIVO\
+   ========================== */\
+.galeria-page .gallery-grid \{\
+  display: grid;\
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));\
+  gap: 24px;\
+  margin: 24px 0 0 0;\
+  padding: 0;\
+\}\
+.galeria-page .gallery-item \{\
+  background: rgba(30, 42, 65, 0.93);\
+  border-radius: 18px;\
+  box-shadow: 0 3px 18px #0005;\
+  overflow: hidden;\
+  position: relative;\
+  transition: transform .15s, box-shadow .18s;\
+  cursor: pointer;\
+\}\
+.galeria-page .gallery-item img \{\
+  width: 100%;\
+  height: 220px;\
+  object-fit: cover;\
+  display: block;\
+  transition: transform .25s;\
+  border-radius: 16px 16px 0 0;\
+\}\
+.galeria-page .gallery-item:hover \{\
+  transform: scale(1.035) translateY(-3px);\
+  box-shadow: 0 7px 30px #1a71e633;\
+\}\
+.galeria-page .gallery-item:hover img \{\
+  transform: scale(1.06);\
+\}\
+.galeria-page .caption \{\
+  background: rgba(16,32,64,0.85);\
+  color: #fff;\
+  padding: 12px 8px;\
+  font-size: 1em;\
+  border-radius: 0 0 14px 14px;\
+  text-align: center;\
+  font-weight: 500;\
+  min-height: 50px;\
+\}\
+@media (max-width: 600px) \{\
+  .galeria-page .gallery-grid \{ grid-template-columns: 1fr; gap: 13px; \}\
+  .galeria-page .gallery-item img \{ height: 43vw; min-height: 150px; \}\
+  .galeria-page .caption \{ font-size: 0.97em; padding: 9px 5px; min-height: 37px;\}\
+\}\
+/* LIGHTBOX s\'f3 para galeria */\
+.galeria-page .lightbox \{\
+  display: none;\
+  position: fixed;\
+  z-index: 9999;\
+  left: 0; top: 0; width: 100vw; height: 100vh;\
+  background: rgba(9,14,28,0.96);\
+  justify-content: center;\
+  align-items: center;\
+  flex-direction: column;\
+\}\
+.galeria-page .lightbox:target \{\
+  display: flex;\
+\}\
+.galeria-page .lightbox img \{\
+  max-width: 94vw;\
+  max-height: 82vh;\
+  border-radius: 19px;\
+  box-shadow: 0 10px 38px #000a;\
+  margin-bottom: 18px;\
+  object-fit: contain;\
+\}\
+.galeria-page .lightbox-caption \{\
+  color: #fff;\
+  background: rgba(25,45,80,0.78);\
+  padding: 12px 17px;\
+  border-radius: 14px;\
+  font-size: 1.13em;\
+  font-weight: 600;\
+  text-align: center;\
+  max-width: 93vw;\
+  margin: 0 auto;\
+\}\
+.galeria-page .lightbox .close \{\
+  position: absolute;\
+  top: 21px;\
+  right: 38px;\
+  color: #fff;\
+  font-size: 2.4em;\
+  font-weight: bold;\
+  text-decoration: none;\
+  z-index: 2;\
+\}\
+.galeria-page .lightbox .close:after \{\
+  content: "\'d7";\
+  font-size: 2.2em;\
+  color: #fff;\
+  text-shadow: 0 4px 16px #000c;\
+  cursor: pointer;\
+\}\
+@media (max-width: 600px) \{\
+  .galeria-page .lightbox img \{ max-width: 97vw; max-height: 63vh;\}\
+  .galeria-page .lightbox-caption \{ font-size: 1em; padding: 8px 4vw; \}\
+  .galeria-page .lightbox .close \{ top: 12px; right: 12px; font-size: 2em; \}\
+\}\
+.galeria-page .hero-title \{\
+  text-align: center;\
+  font-size: 2.1em;\
+  font-weight: 700;\
+  margin-bottom: 8px;\
+  background: linear-gradient(90deg, #3ae374 0%, #17c0eb 55%, #7158e2 100%);\
+  -webkit-background-clip: text;\
+  -webkit-text-fill-color: transparent;\
+  letter-spacing: .4px;\
+\}\
+.galeria-page .hero-desc \{\
+  text-align: justify;    /* <-- Justify o texto do topo */\
+  font-size: 1.13em;\
+  color: #e8e8e8;\
+  max-width: 670px;\
+  margin: 0 auto 16px auto;\
+  line-height: 1.6;\
+  padding: 0 6px;\
+\}\
+@media (max-width: 600px) \{\
+  .galeria-page .hero-title \{ font-size: 1.22em; \}\
+  .galeria-page .hero-desc \{ font-size: 1em; padding: 0 2vw; \}\
+\}\
+.galeria-cta \{\
+  margin: 38px auto 20px auto;\
+  max-width: 430px;\
+  background: linear-gradient(90deg, #17c0eb 0%, #3ae374 100%);\
+  border-radius: 19px;\
+  box-shadow: 0 3px 22px #13efb295, 0 1px 2px #0002;\
+  padding: 22px 18px 20px 18px;\
+  text-align: center;\
+  color: #122449;\
+  display: flex;\
+  flex-direction: column;\
+  align-items: center;\
+\}\
+\
+.galeria-cta .cta-title \{\
+  font-size: 1.17em;\
+  font-weight: 800;\
+  margin-bottom: 10px;\
+  letter-spacing: 0.2px;\
+  color: #122449;\
+\}\
+\
+.galeria-cta .cta-text \{\
+  font-size: 1.02em;\
+  font-weight: 500;\
+  margin-bottom: 15px;\
+  color: #0b2242c9;\
+  line-height: 1.5;\
+\}\
+\
+.galeria-cta .cta-btn-bright \{\
+  display: inline-block;\
+  background: linear-gradient(90deg, #124957 0%, #1e887e 100%);\
+  color: #fff !important;\
+  font-size: 1.08em;\
+  padding: 12px 32px;\
+  border-radius: 11px;\
+  font-weight: 700;\
+  text-decoration: none;\
+  box-shadow: 0 2px 8px #0002;\
+  transition: background 0.18s, color 0.18s, transform 0.15s;\
+  text-shadow: 0 2px 4px #093b3490;\
+  letter-spacing: 0.5px;\
+  margin-top: 2px;\
+\}\
+.galeria-cta .cta-btn-bright:hover \{\
+  background: linear-gradient(90deg, #19976a 0%, #31c6ad 100%);\
+  color: #fff;\
+  transform: translateY(-2px) scale(1.03);\
+\}\
+\
+@media (max-width: 600px) \{\
+  .galeria-cta \{\
+    max-width: 97vw;\
+    padding: 17px 4vw 16px 4vw;\
+  \}\
+  .galeria-cta .cta-title \{ font-size: 1.02em; \}\
+  .galeria-cta .cta-text \{ font-size: .97em; \}\
+  .galeria-cta .cta-btn-bright \{ font-size: 0.99em; padding: 11px 0; width: 100%; \}\
+\}\
+.lightbox-caption \{\
+  color: #fff;\
+  background: rgba(25,45,80,0.92);\
+  padding: 13px 6vw 10px 6vw;\
+  border-radius: 14px;\
+  font-size: 1.1em;\
+  font-weight: 600;\
+  text-align: center;\
+  max-width: 97vw;\
+  margin: 18px auto 0 auto;\
+  position: static;\
+  line-height: 1.45;\
+  word-break: break-word;\
+  box-sizing: border-box;\
+  z-index: 2;\
+\}\
+\
+@media (max-width: 600px) \{\
+  .lightbox \{\
+    flex-direction: column;\
+    align-items: center;\
+    justify-content: center;\
+  \}\
+  .lightbox img \{\
+    max-width: 96vw;\
+    max-height: 58vh;\
+    display: block;\
+    margin: 0 auto;\
+  \}\
+  .lightbox-caption \{\
+    font-size: 1em;\
+    margin-top: 15px;\
+    max-width: 96vw;\
+    padding: 11px 3vw 10px 3vw;\
+  \}\
+\}\
+/* =============\
+   REVIEWS PAGE \
+   ============= */\
+.reviews-page .reviews-title \{\
+  background: linear-gradient(90deg, #3ae374 0%, #17c0eb 60%, #7158e2 100%);\
+  -webkit-background-clip: text;\
+  -webkit-text-fill-color: transparent;\
+  background-clip: text;\
+  font-weight: 800;\
+  text-align: center;\
+  letter-spacing: 1px;\
+  margin-bottom: 8px;\
+  /* j\'e1 tem font-size no HTML, pode ajustar se quiser */\
+  /* Anima\'e7\'e3o de entrada j\'e1 vem do .fade-in-fast */\
+\}\
+.reviews-page .reviews-grid \{\
+  display: flex;\
+  flex-wrap: wrap;\
+  gap: 24px;\
+  justify-content: center;\
+  margin-bottom: 44px;\
+  margin-top: 18px;\
+\}\
+.reviews-page .review-card \{\
+  background: linear-gradient(90deg,#3ae374 0%,#17c0eb 70%,#7158e2 100%);\
+  color: #fff;\
+  border-radius: 14px;\
+  box-shadow: 0 2px 12px #122a7e38;\
+  max-width: 340px; min-width: 210px;\
+  padding: 19px 19px 15px 19px;\
+  font-size: 1.08em;\
+  position: relative;\
+  text-align: left;\
+  display: flex;\
+  flex-direction: column;\
+  align-items: flex-start;\
+  margin-bottom: 6px;\
+  animation: fadeInBadge 1.1s;\
+\}\
+.reviews-page .review-card .stars \{\
+  color: #ffd700;\
+  font-size: 1.2em;\
+  margin-bottom: 7px;\
+  display: block;\
+  align-self: center;\
+  text-align: center;\
+  width: 100%;\
+\}\
+.reviews-page .review-card .author \{\
+  font-size: .96em;\
+  margin-top: 14px;\
+  color: #fffbe9;\
+  font-weight: 700;\
+  text-align: left;\
+  display: block;\
+\}\
+\
+@media (max-width: 600px) \{\
+  .reviews-page .reviews-grid \{\
+    flex-direction: column;\
+    gap: 12px;\
+    align-items: center;\
+  \}\
+  .reviews-page .review-card \{\
+    max-width: 97vw;\
+    min-width: 0;\
+    font-size: 1em;\
+  \}\
+\}\
+.reviews-page .hero-title \{\
+  font-size: 2rem;\
+  font-weight: bold;\
+  margin-bottom: 10px;\
+  background: linear-gradient(90deg, #3ae374 0%, #17c0eb 55%, #7158e2 100%);\
+  -webkit-background-clip: text;\
+  -webkit-text-fill-color: transparent;\
+  background-clip: text;\
+  color: transparent;\
+  text-align: center;\
+\}\
+\
+.reviews-page .hero-desc \{\
+  text-align: center;\
+\}\
+\
+/* ...continua igual o resto do seu bloco... */\
+.reviews-page .reviews-social-proof \{\
+  background: linear-gradient(90deg,#FFA801 60%,#FFD700 100%);\
+  color: #232323;\
+  border-radius: 40px;\
+  padding: 9px 28px 9px 22px;\
+  box-shadow: 0 4px 14px 0 #0001;\
+  font-size: 1.1em;\
+  font-weight: 700;\
+  letter-spacing: 0.5px;\
+  margin-bottom: 20px;\
+  margin-top: 15px;\
+  display: flex;\
+  align-items: center;\
+  justify-content: center;\
+  min-height: 44px;\
+  width: fit-content;\
+  margin-left: auto;\
+  margin-right: auto;\
+  gap: 7px;\
+  flex-wrap: wrap; /* importante! */\
+  text-align: center;\
+\}\
+\
+.desktop-only \{ display: inline; \}\
+.mobile-only \{ display: none; \}\
+\
+@media (max-width: 600px) \{\
+  .desktop-only \{ display: none !important; \}\
+  .mobile-only  \{ display: inline-block !important; \}\
+  .reviews-page .reviews-social-proof \{\
+    width: auto !important;\
+    max-width: 100% !important;\
+    padding-left: 3vw !important;\
+    padding-right: 3vw !important;\
+    padding-top: 11px !important;\
+    padding-bottom: 11px !important;\
+    border-radius: 16px !important;\
+    font-size: 1.05em !important;\
+    margin-left: auto !important;\
+    margin-right: auto !important;\
+    box-sizing: border-box !important;\
+    flex-direction: column !important;\
+    align-items: center !important;\
+    justify-content: center !important;\
+    gap: 0.3em !important;\
+    min-width: 0 !important;\
+    overflow-wrap: anywhere;\
+  \}\
+  .reviews-page .reviews-social-proof .stars \{\
+    margin-bottom: 2px !important;\
+    margin-top: 2px !important;\
+    font-size: 1.22em !important;\
+    width: 100% !important;\
+    text-align: center !important;\
+  \}\
+\}\
+\
+.reviews-page .reviews-intro \{\
+  margin: 0 auto 24px auto;\
+  max-width: 640px;\
+  font-size: 1.15em;\
+  line-height: 1.52;\
+  font-weight: 500;\
+  color: #fff;\
+  text-align: justify; /* Desktop por padr\'e3o */\
+\}\
+\
+/* Mobile: sempre alinhado \'e0 esquerda */\
+@media (max-width: 700px) \{\
+  .reviews-page .reviews-intro \{\
+    text-align: left !important;\
+    font-size: 1em !important;\
+    margin-left: 0 !important;\
+    margin-right: 0 !important;\
+  \}\
+\}\
+\
+/* ==========================\
+   RESPONSIVO\
+   ========================== */\
+\
+@media (max-width: 900px) \{\
+  .container \{ max-width: 98vw; \}\
+  .topbar \{ flex-direction: column; align-items: stretch; gap: 0; padding-top: 10px;\}\
+  .nav-links \{ justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px;\}\
+  .lang-flags \{ justify-content: center; margin: 0 auto 6px auto;\}\
+  .home-page .home-hero,\
+  .ebook-page .hero \{ flex-direction: column; gap: 12px; align-items: center; margin-bottom: 12px;\}\
+  .home-page .home-profile \{ margin: 12px 0 0 0; \}\
+\}\
+@media (max-width: 540px) \{\
+  .home-page .book-cover,\
+  .ebook-page .hero-img \{ max-width: 98vw; \}\
+  .home-page .profile-pic \{ width: 90px; height: 90px; border-width: 4px;\}\
+  .home-page .home-buttons, .ebook-page .home-buttons \{ max-width: 97vw; margin-top: 16px; \}\
+  .home-page .cta-btn-bright, .ebook-page .cta-btn-bright \{ font-size: 1em; border-radius: 12px; padding: 12px 0;\}\
+  .topbar \{ padding-top: 3px; \}\
+  .lang-flags img \{ width: 26px; height: 26px; \}\
+  .ebook-page .hero-title \{ font-size: 1.1rem; \}\
+  .ebook-page .hero-desc \{ font-size: 1em; padding: 0 2vw;\}\
+\}   \
+\
+@media (max-width: 600px) \{\
+  .ebook-page .book-cover-card \{\
+    box-sizing: border-box;\
+    width: 100%;\
+    max-width: 100vw;\
+    padding: 8px 0;      /* padding s\'f3 vertical! */\
+    margin: 14px 0 0 0;  /* centralizado, sem auto para evitar bug de overflow */\
+    border-radius: 13px;\
+  \}\
+  .ebook-page .book-cover \{\
+    width: 92vw;         /* faz a capa ficar sempre dentro do card */\
+    max-width: 340px;\
+    display: block;\
+    margin: 0 auto;\
+    border-radius: 8px;\
+  \}\
+\} \
+\
+/* ========== AJUSTE MOBILE "QUEM SOMOS" ========== */\
+@media (max-width: 900px) \{\
+  .about-page .about-card \{\
+    flex-direction: column !important;\
+    align-items: center !important;\
+    gap: 14px !important;\
+    padding: 18px 3vw 20px 3vw !important;\
+    max-width: 99vw !important;\
+    min-width: 0 !important;\
+  \}\
+  .about-page .about-photo \{\
+    order: -1 !important;\
+    width: 100% !important;\
+    justify-content: center !important;\
+    display: flex !important;\
+    margin: 0 0 16px 0 !important;\
+  \}\
+  .about-page .about-photo img \{\
+    width: 120px !important;\
+    height: 120px !important;\
+    border-width: 4px !important;\
+    margin: 0 auto !important;\
+    display: block !important;\
+  \}\
+  .about-page .about-content \{\
+    order: 2 !important;\
+    text-align: justify !important;\
+    width: 100% !important;\
+    margin: 0 !important;\
+    padding: 0 !important;\
+  \}\
+ .about-page .about-content h1 \{\
+    text-align: center !important; /* S\'f3 o t\'edtulo centralizado */\
+  \}\
+@media (max-width: 900px) \{\
+  .about-page .about-content .contact \{\
+    text-align: left !important;\
+    margin-left: 0;\
+    margin-right: 0;\
+  \}\
+\}\
+.lightbox \{\
+  display: none;\
+  position: fixed;\
+  z-index: 9999;\
+  left: 0; top: 0; width: 100vw; height: 100vh;\
+  background: rgba(9,14,28,0.96);\
+  justify-content: center;\
+  align-items: center;\
+  flex-direction: column;\
+  overflow-y: auto; /* ADICIONADO */\
+  padding: 20px 0 20px 0; /* Espa\'e7o p/ legenda */\
+\}\
+.lightbox img \{\
+  max-width: 95vw;\
+  max-height: 68vh; /* reduzido p/ abrir espa\'e7o para legenda embaixo */\
+  border-radius: 19px;\
+  box-shadow: 0 10px 38px #000a;\
+  margin-bottom: 16px;\
+  object-fit: contain;\
+  display: block;\
+\}\
+\
+/* Legenda sempre vis\'edvel, quebrando linha, com padding extra */\
+.lightbox-caption \{\
+  color: #fff;\
+  background: rgba(25,45,80,0.85);\
+  padding: 11px 12px 11px 12px;\
+  border-radius: 14px;\
+  font-size: 1.04em;\
+  font-weight: 600;\
+  text-align: center;\
+  max-width: 92vw;\
+  word-break: break-word;\
+  margin: 0 auto;\
+\}\
+\
+@media (max-width: 600px) \{\
+  .lightbox img \{\
+    max-width: 99vw;\
+    max-height: 47vh;  /* ainda menor, para sobrar espa\'e7o */\
+  \}\
+  .lightbox-caption \{\
+    font-size: 0.98em;\
+    padding: 8px 2vw;\
+    max-width: 97vw;\
+  \}\
+\}\
+@media (max-width: 600px) \{\
+  .lightbox \{\
+    flex-direction: column;\
+    align-items: center;\
+    justify-content: center;\
+  \}\
+  .lightbox img \{\
+    max-width: 97vw;\
+    max-height: 56vh;  /* reduz a altura m\'e1xima da imagem */\
+  \}\
+  .lightbox-caption \{\
+    background: rgba(25,45,80,0.95);\
+    position: static;  /* tira da sobreposi\'e7\'e3o absoluta */\
+    margin-top: 15px;  /* separa da imagem */\
+    font-size: 1em;\
+    padding: 13px 4vw 10px 4vw;\
+    border-radius: 12px;\
+    max-width: 96vw;\
+    color: #fff;\
+    z-index: 2;\
+  \}\
+\}\
+  @media (max-width: 900px) and (orientation: landscape) \{\
+  .lightbox img \{ max-height: 45vh; \}\
+  .lightbox-caption \{ font-size: 0.96em; \}\
+\}\
+  /* MOBILE: Troca de horizontal para vertical em telas menores */\
+@media (max-width: 900px) \{\
+  .home-page .home-books \{\
+    flex-direction: column;\
+    gap: 18px;\
+    align-items: center;\
+  \}\
+\}\
+@media (max-width: 900px) \{\
+  .ebook-page .about-card \{\
+    flex-direction: column !important;\
+    align-items: center !important;\
+    gap: 14px !important;\
+    padding: 18px 3vw 20px 3vw !important;\
+    max-width: 99vw !important;\
+    min-width: 0 !important;\
+  \}\
+  .ebook-page .about-photo \{\
+    margin: 0 !important;\
+    width: 100% !important;\
+    justify-content: center !important;\
+    display: flex !important;\
+  \}\
+  .ebook-page .about-photo img \{\
+    width: 120px !important;\
+    height: 120px !important;\
+    border-width: 4px !important;\
+    margin: 0 auto !important;\
+    display: block !important;\
+  \}\
+  .ebook-page .about-content \{\
+    text-align: left !important;\
+    width: 100% !important;\
+    margin: 0 !important;\
+    padding: 0 !important;\
+  \}\
+  .ebook-page .about-btn-wrap \{\
+    width: 100% !important;\
+    display: flex !important;\
+    justify-content: center !important;\
+    margin: 1.2em 0 0 0 !important;\
+  \}\
+\}\
+.about-page .about-card,\
+.ebook-page .about-card \{\
+  display: flex;\
+  align-items: center;\
+  gap: 44px;\
+  /* ... */\
+\}\
+@media (max-width: 900px) \{\
+  .about-page .about-card,\
+  .ebook-page .about-card \{\
+    flex-direction: column !important;\
+    /* ... */\
+  \}\
+\}\
+\
+\}}
