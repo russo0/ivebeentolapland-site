@@ -9,7 +9,7 @@
 <body class="about-page">
   <!-- VÍDEO DE FUNDO -->
  <div class="video-bg">
-  <iframe src="https://player.vimeo.com/video/1105489099?background=1&autoplay=1&loop=1&muted=1&controls=0"
+  <iframe src=""
     allow="autoplay; fullscreen"
     allowfullscreen
     title="Aurora Timelapse"
@@ -74,4 +74,15 @@
     </div>
   </div>
 </body>
+  <script>
+  window.addEventListener('DOMContentLoaded', function() {
+    // URLs dos vídeos (com parâmetros Vimeo)
+    const desktopVideo = "https://player.vimeo.com/video/1105489099?background=1&autoplay=1&loop=1&muted=1&controls=0";
+    const mobileVideo  = "https://player.vimeo.com/video/1105865708?background=1&autoplay=1&loop=1&muted=1&controls=0";
+    // Detecta se é mobile (700px de largura ou menos)
+    const isMobile = window.matchMedia("(max-width: 700px)").matches;
+    // Troca o src do iframe conforme o dispositivo
+    document.getElementById('video-fundo').src = isMobile ? mobileVideo : desktopVideo;
+  });
+</script>
 </html>
