@@ -12,16 +12,16 @@
   <div class="video-bg">
     <iframe id="video-fundo"
       src=""
+      frameborder="0"
       allow="autoplay; fullscreen"
       allowfullscreen
       title="Aurora Timelapse"
-      frameborder="0"
       tabindex="-1"></iframe>
     <div class="video-overlay"></div>
   </div>
   <div class="container">
     <!-- TOPBAR -->
-    <div class="topbar">
+   <div class="topbar">
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="e-book.html">E-book</a>
@@ -138,15 +138,12 @@
     </div>
   </div>
   <!-- SCRIPT PARA TROCAR O VÍDEO CONFORME O DISPOSITIVO -->
-  <script>
+   <script>
+    // Só carrega vídeo de fundo no desktop
     window.addEventListener('DOMContentLoaded', function() {
-      // URLs dos vídeos (com parâmetros Vimeo)
-      const desktopVideo = "https://player.vimeo.com/video/1105489099?background=1&autoplay=1&loop=1&muted=1&controls=0";
-      const mobileVideo  = "https://player.vimeo.com/video/1105865708?background=1&autoplay=1&loop=1&muted=1&controls=0";
-      // Detecta se é mobile (700px de largura ou menos)
-      const isMobile = window.matchMedia("(max-width: 700px)").matches;
-      // Troca o src do iframe conforme o dispositivo
-      document.getElementById('video-fundo').src = isMobile ? mobileVideo : desktopVideo;
+      const videoDesktop = "https://player.vimeo.com/video/1105489099?background=1&autoplay=1&loop=1&muted=1&controls=0";
+      const isDesktop = window.matchMedia("(min-width: 701px)").matches;
+      document.getElementById('video-fundo').src = isDesktop ? videoDesktop : "";
     });
   </script>
 </body>
