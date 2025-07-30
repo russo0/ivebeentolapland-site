@@ -353,3 +353,35 @@ body {
 body {
   background: #111928 !important;
 }
+/* 1. Evita rolagem causada por overflow do vídeo em toda a página */
+html, body {
+  overflow-x: hidden !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  position: relative;
+  /* previne double scroll no iOS */
+  overscroll-behavior-x: none;
+}
+
+/* 2. Topbar translúcida no mobile */
+@media (max-width: 900px) {
+  .about-page .topbar {
+    background: rgba(18, 23, 38, 0.82) !important;
+    box-shadow: 0 3px 12px #0004 !important;
+    border-radius: 0 0 16px 16px !important;
+    backdrop-filter: blur(3px) !important;
+    -webkit-backdrop-filter: blur(3px) !important;
+    margin-bottom: 16px;
+  }
+}
+
+/* Garante que nada escapa da tela! */
+.about-page .container,
+.about-page .about-card,
+.about-page .topbar,
+.about-page .nav-links,
+.about-page .lang-flags {
+  max-width: 100vw !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
