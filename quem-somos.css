@@ -372,11 +372,11 @@ html, body {
 /* 2. Topbar translúcida no mobile */
 @media (max-width: 900px) {
   .about-page .topbar {
-    background: rgba(18, 23, 38, 0.82) !important;
-    box-shadow: 0 3px 12px #0004 !important;
-    border-radius: 0 0 16px 16px !important;
-    backdrop-filter: blur(3px) !important;
-    -webkit-backdrop-filter: blur(3px) !important;
+    background: rgba(18, 23, 38, 0.82);
+    box-shadow: 0 3px 12px #0004;
+    border-radius: 0 0 16px 16px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     margin-bottom: 16px;
   }
 }
