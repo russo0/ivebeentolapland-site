@@ -221,32 +221,47 @@ body {
 @media (max-width: 900px) {
   .about-page .about-card {
     flex-direction: column;
+    align-items: flex-start;
     padding: 20px 6vw 20px 6vw;
     gap: 16px;
     max-width: 96vw;
-    align-items: center;
+    margin-top: 16vw;
   }
-  .about-page .about-content { text-align: center; }
-  .about-page .about-content h1 { font-size: 1.33rem; }
+  .about-page .about-content {
+    text-align: left; /* Alinhado à esquerda */
+    width: 100%;
+  }
+  .about-page .about-photo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 18px;
+    order: -1; /* Traz a foto para o topo */
+  }
   .about-page .about-photo img { width: 110px; height: 110px; border-width: 4px;}
-  .about-page .about-btn-wrap { justify-content: center; }
-  .about-page .about-card { margin-top: 20vw; }
-  .about-page .video-bg, 
-  .about-page .video-bg iframe,
-  .about-page .video-bg .video-overlay {
+  .about-page .about-btn-wrap { justify-content: flex-start; }
+  .about-page .topbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 0 0 0;
     width: 100vw;
-    height: 100vh;
     min-width: 100vw;
-    min-height: 100vh;
-    left: 0;
-    top: 0;
+    box-sizing: border-box;
+    align-items: flex-start;
+  }
+  .about-page .nav-links {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100vw;
+    font-size: 0.98em;
   }
 }
 
 @media (max-width: 540px) {
+  .about-page .about-card { padding: 15px 4vw; }
   .about-page .about-photo img { width: 80px; height: 80px;}
   .about-page .about-content h1 { font-size: 1.03rem;}
-  .about-page .about-card { padding: 15px 4vw; }
   .about-page .cta-btn, 
   .about-page .cta-btn-bright { 
     font-size: 1em; 
@@ -256,10 +271,16 @@ body {
     min-width: 0;
     box-sizing: border-box;
   }
-  .about-page .about-card { margin-top: 14vw; }
+  .about-page .topbar {
+    gap: 6px;
+    padding: 10px 0 0 0;
+  }
+  .about-page .nav-links {
+    gap: 5px;
+    font-size: 0.93em;
+  }
 }
-
-/* Reduz overflows do vídeo no mobile */
+/* Garante o vídeo de fundo certinho no mobile */
 .about-page .video-bg, 
 .about-page .video-bg iframe, 
 .about-page .video-bg .video-overlay {
@@ -277,10 +298,13 @@ body {
   z-index: 0;
 }
 
-/* Garante que container e card fiquem acima do vídeo */
-.about-page,
-.about-page .container,
-.about-page .about-card {
-  position: relative;
-  z-index: 2;
+/* Deixa o link do Instagram mais visível */
+.about-page .contact a[href*="instagram"] {
+  color: #3ae374 !important;
+  font-weight: bold;
+  text-shadow: 0 1px 4px #191c2e90;
+}
+.about-page .contact a[href*="instagram"]:hover {
+  color: #fff889 !important;
+  text-decoration: underline;
 }
