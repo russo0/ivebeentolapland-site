@@ -97,7 +97,7 @@ body {
   min-height: 56.25vw;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  pointer-events: none;
+  pointer-events: none !important;
   filter: brightness(0.8) blur(0.2px);
   border: none;
   background: #000;
@@ -351,3 +351,54 @@ body {
 /* ==========================
    FIM!
    ========================== */
+.video-bg {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+#video-fundo {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 177.77vh !important;
+  height: 100vh !important;
+  min-width: 100vw !important;
+  min-height: 56.25vw !important;
+  transform: translate(-50%, -50%) !important;
+  object-fit: cover !important;
+  pointer-events: none !important;
+  filter: brightness(0.8) blur(0.2px) !important;
+  border: none !important;
+  background: #000 !important;
+  display: block !important;
+  z-index: 0 !important;
+}
+.about-page .container,
+.about-page .topbar,
+.about-page .about-card,
+.about-page .footer,
+.about-page .cta-final {
+  position: relative !important;
+  z-index: 2 !important;
+}
+@media (max-width: 900px) {
+  .about-page .topbar {
+    background: rgba(18, 23, 38, 0.80) !important;
+    box-shadow: 0 3px 12px #0004 !important;
+    border-radius: 0 0 16px 16px !important;
+    backdrop-filter: blur(3px) !important;
+    -webkit-backdrop-filter: blur(3px) !important;
+    margin-bottom: 16px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 14px 0 0 0 !important;
+    width: 100vw !important;
+    min-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+}
