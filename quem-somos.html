@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<style>
-  #video-fundo {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    min-width: 100vw !important;
-    min-height: 100vh !important;
-    object-fit: cover !important;
-    background: #000 !important;
-    border: none !important;
-    pointer-events: none !important;
-    z-index: 0 !important;
-    filter: brightness(0.8) blur(0.2px) !important;
-    display: block !important;
-  }
-</style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quem Somos | I've Been to Lapland</title>
   <link rel="stylesheet" href="quem-somos.css">
+  <style>
+    /* VÍDEO CENTRALIZADO EM TODAS AS TELAS */
+    .video-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+    #video-fundo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 177.77vh;
+      height: 100vh;
+      min-width: 100vw;
+      min-height: 56.25vw;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      pointer-events: none;
+      filter: brightness(0.8) blur(0.2px);
+      border: none;
+      background: #000;
+      display: block;
+      z-index: 0;
+    }
+    .video-bg .video-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: linear-gradient(180deg, rgba(9,16,32,0.13) 0%, rgba(9,16,32,0.18) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body class="about-page">
   <!-- VÍDEO DE FUNDO -->
- <div class="video-bg">
- <iframe id="video-fundo"
-  src=""
-  width="1920"
-  height="1080"
-  allow="autoplay; fullscreen"
-  allowfullscreen
-  title="Aurora Timelapse"
-  frameborder="0"
-  tabindex="-1"></iframe>
-  <div class="video-overlay"></div>
-</div>
+  <div class="video-bg">
+    <iframe id="video-fundo"
+      src=""
+      allow="autoplay; fullscreen"
+      allowfullscreen
+      title="Aurora Timelapse"
+      frameborder="0"
+      tabindex="-1"></iframe>
+    <div class="video-overlay"></div>
+  </div>
   <div class="container">
     <div class="topbar">
       <div class="nav-links">
@@ -70,8 +86,8 @@
         <div class="contact">
           <b>Fale com a gente:</b>
           <br> <b>Instagram:</b>
-          <a href="https://instagram.com/ivebeentolapland" target="_blank" style="color:#0b2242;font-size:1em;text-decoration:none;">@ivebeentolapland</a> &nbsp;|&nbsp;
-          <a href="https://instagram.com/natycorreia" target="_blank" style="color:#0b2242;font-size:1em;text-decoration:none;">@natycorreia</a>
+          <a href="https://instagram.com/ivebeentolapland" target="_blank" style="color:#3ae374;font-size:1em;font-weight:bold;text-decoration:none;">@ivebeentolapland</a> &nbsp;|&nbsp;
+          <a href="https://instagram.com/natycorreia" target="_blank" style="color:#3ae374;font-size:1em;font-weight:bold;text-decoration:none;">@natycorreia</a>
           <br> <b>E-mail:</b>
           <a href="mailto:ivebeentolapland@gmail.com" style="color:#17c0eb;font-weight:bold;font-size:1em;text-decoration:none;">ivebeentolapland@gmail.com</a>
         </div>
@@ -94,16 +110,16 @@
       <br> Todas as imagens e textos são protegidos por direitos autorais.
     </div>
   </div>
-</body>
+  <!-- SCRIPT DE TROCA DE VÍDEO (NÃO REMOVER) -->
   <script>
-  window.addEventListener('DOMContentLoaded', function() {
-    // URLs dos vídeos (com parâmetros Vimeo)
-    const desktopVideo = "https://player.vimeo.com/video/1105489099?background=1&autoplay=1&loop=1&muted=1&controls=0";
-    const mobileVideo  = "https://player.vimeo.com/video/1105865708?background=1&autoplay=1&loop=1&muted=1&controls=0";
-    // Detecta se é mobile (700px de largura ou menos)
-    const isMobile = window.matchMedia("(max-width: 700px)").matches;
-    // Troca o src do iframe conforme o dispositivo
-    document.getElementById('video-fundo').src = isMobile ? mobileVideo : desktopVideo;
-  });
-</script>
+    function setVideo() {
+      const isMobile = window.matchMedia("(max-width: 700px)").matches;
+      const desktopVideo = "https://player.vimeo.com/video/1105489099?background=1&autoplay=1&loop=1&muted=1&controls=0";
+      const mobileVideo  = "https://player.vimeo.com/video/1105865708?background=1&autoplay=1&loop=1&muted=1&controls=0";
+      document.getElementById('video-fundo').src = isMobile ? mobileVideo : desktopVideo;
+    }
+    window.addEventListener('DOMContentLoaded', setVideo);
+    window.addEventListener('resize', setVideo);
+  </script>
+</body>
 </html>
