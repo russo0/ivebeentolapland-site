@@ -54,28 +54,32 @@ html, body {
   box-sizing: border-box;
 }
 
-/* TOPBAR */
-/* TOPBAR */
+/* TOPBAR PADRÃO */
 .topbar {
   width: 100%;
   background: rgba(19, 26, 39, 0.83);
   padding: 18px 0 10px 0;
   border-radius: 0 0 32px 32px;
   margin-bottom: 16px;
-  text-align: center;
   box-shadow: 0 8px 34px #1116;
   font-family: 'Segoe UI', Arial, sans-serif !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  position: relative;
 }
 .topbar .nav-links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   gap: 13px;
   font-size: 1.08em;
   font-weight: bold;
-  text-transform: none;
   color: #fff;
-  margin-bottom: 8px;
+  margin-bottom: 0;
+  margin-left: 24px;
 }
 .topbar .nav-links a {
   color: #fff !important;
@@ -100,12 +104,11 @@ html, body {
   text-decoration: none !important;
 }
 .topbar .lang-flags {
-  margin-top: 6px;
   display: flex;
-  justify-content: center;
   gap: 9px;
+  margin-right: 22px;
+  align-items: center;
 }
-
 /* HERO TITLE/INTRO */
 .reviews-page .hero-title {
   background: linear-gradient(90deg, #3ae374 0%, #17c0eb 55%, #7158e2 100%);
