@@ -138,3 +138,29 @@ body {
   from { opacity: 0; transform: scale(0.94) translateY(34px);}
   to   { opacity: 1; transform: scale(1) translateY(0);}
 }
+/* ====================
+   MOBILE ADJUSTMENTS 
+   ==================== */
+
+@media (max-width: 700px) {
+  .home-page .home-hero {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 18px 0 14px 0 !important;
+  }
+  .home-page .home-books {
+    flex-direction: column !important;    /* Troca row para column */
+    gap: 12vw !important;                 /* Espaço vertical entre as capas */
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .home-page .book-cover {
+    max-width: 86vw !important;           /* Capas não vão cortar */
+    width: 100% !important;
+    margin: 0 auto 2vw auto !important;
+    display: block !important;
+  }
+  .home-page .home-profile {
+    margin: 0 auto 18px auto !important;
+  }
+}
