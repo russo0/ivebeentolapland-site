@@ -262,39 +262,27 @@ body, html {
 /* TOPBAR Mobile */
 @media (max-width: 700px) {
   .topbar {
-    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 100vw !important;
+    gap: 0 !important;
     padding: 10px 0 2px 0 !important;
-    background: rgba(20,30,50,0.91) !important;
     border-radius: 0 0 15px 15px !important;
-    box-sizing: border-box !important;
+    background: rgba(20,30,50,0.91) !important;
   }
   .nav-links {
-    display: flex !important;
+    flex-direction: row !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
-    align-items: center !important;
     gap: 7px !important;
-    width: 100vw !important;
     margin-bottom: 6px !important;
   }
-  .nav-links a {
-    font-size: 1.12em !important;
-    padding: 1.5px 5px !important;
-    font-weight: 700 !important;
-    white-space: nowrap;
-  }
   .lang-flags {
-    display: flex !important;
+    flex-direction: row !important;
     justify-content: center !important;
     align-items: center !important;
-    width: 100vw !important;
     gap: 10px !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    margin: 0 !important;
   }
   .lang-flags img {
     width: 29px !important;
