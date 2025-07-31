@@ -24,7 +24,7 @@
 .nav-links a {
   position: relative;
   padding: 6px 0;
-  margin: 0 10px; /* Controla o respiro dos lados */
+  margin: 0 10px;
   color: #fff;
   font-weight: 700;
   text-decoration: none;
@@ -41,21 +41,11 @@
   opacity: 0.85;
   font-size: 1em;
   position: absolute;
-  left: -17px; /* Aproxima ou afasta o separador da esquerda */
+  left: -17px;
   top: 0;
   bottom: 0;
   margin: auto 0;
 }
-
-.nav-links a:not(:last-child)::after {
-  content: "|";
-  color: #3ae374;
-  margin-left: 10px;
-  font-weight: 600;
-  opacity: 0.85;
-  font-size: 1em;
-}
-
 .nav-links a:hover { color: #3ae374; }
 
 .lang-flags {
@@ -102,12 +92,6 @@
     padding: 5px 7px;
     white-space: nowrap;
     font-weight: bold;
-  }
-  .nav-links a:not(:last-child)::after {
-    content: "|";
-    margin-left: 8px;
-    margin-right: 8px;
-    font-size: 0.95em;
   }
   .nav-links a + a::before {
     left: -13px;
