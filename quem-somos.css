@@ -36,7 +36,7 @@
 /* ---- CONTAINER & CARD ---- */
 .about-page .container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
   padding: 0 10px 40px 10px;
   position: relative;
   z-index: 2;
