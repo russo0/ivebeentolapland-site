@@ -1,55 +1,6 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  background: #111928;
-  color: #fff;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 10px 40px 10px;
-  position: relative;
-  z-index: 2;
-}
-
-.video-bg {
-  display: block;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-.video-bg iframe {
-  position: absolute;
-  top: 50%; left: 50%;
-  width: 177.77vh; height: 100vh;
-  min-width: 100vw; min-height: 56.25vw;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  filter: brightness(0.85) blur(0.7px);
-  border: none;
-  pointer-events: none;
-  background: #000;
-  display: block;
-}
-.video-bg .video-overlay {
-  position: absolute;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  background: linear-gradient(180deg,rgba(9,16,32,0.22) 0%,rgba(9,16,32,0.24) 100%);
-  z-index: 1;
-  pointer-events: none;
-}
-/* Some o vídeo no mobile */
-@media (max-width: 700px) {
-  .video-bg { display: none !important; }
-}
-/* HERO */
+/* ==========================
+   EBOOK PAGE EXCLUSIVO
+   ========================== */
 .ebook-page .hero {
   margin-top: 26px;
   margin-bottom: 36px;
@@ -80,7 +31,7 @@ body, html {
   gap: 32px;
   align-items: center;
   max-width: 720px;
-  width: 720px;
+  width: 720px;              /* largura fixa desktop */
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -123,8 +74,15 @@ body, html {
   opacity: 0.94;
   transform: scale(1.03) translateY(-2px);
 }
-
-/* BENEFICIOS */
+.ebook-page .hero-img {
+  margin: 32px auto 0 auto;
+  width: 320px; 
+  max-width: 98vw; 
+  border-radius: 16px;
+  box-shadow: 0 8px 36px #121e49a6;
+  display: block;
+}
+.ebook-page .benefits,
 .ebook-page .reviews {
   display: flex;
   flex-wrap: wrap;
@@ -158,10 +116,11 @@ body, html {
   color: #aaffd7 !important;
   letter-spacing: 0.5px;
   line-height: 1.23;
-  text-shadow: 0 3px 12px #151a40, 0 2px 8px #21c0eb99, 0 1px 6px #3ae37480;
+  text-shadow:
+    0 3px 12px #151a40,
+    0 2px 8px #21c0eb99,
+    0 1px 6px #3ae37480;
 }
-
-/* REVIEWS */
 .ebook-page .reviews-title {
   margin-top: 56px;
   margin-bottom: 17px;
@@ -203,8 +162,6 @@ body, html {
   text-align: left;
   display: block;
 }
-
-/* CARD SOBRE */
 .ebook-page .about-card {
   background: linear-gradient(90deg, #282e3a 0%, #243c62 70%, #1cb5e0 100%);
   max-width: 670px;
@@ -283,42 +240,32 @@ body, html {
   color: #fff;
   transform: translateY(-2px) scale(1.03);
 }
-
-/* Footer e CTA padrão */
-.cta-final {
-  margin: 58px auto 0 auto;
-  text-align: center;
+.ebook-page .book-cover-card {
+  background: #202b37;
+  padding: 14px;
+  border-radius: 18px;
+  box-shadow: 0 8px 36px #121e49a6, 0 3px 12px #1626;
+  margin: 32px auto 0 auto;
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
-.cta-btn {
-  background: linear-gradient(90deg,#21c287,#14a6ea 60%,#6847d3 100%);
-  color: #fff;
-  border: none;
-  font-size: 1.19em;
-  padding: 14px 38px;
-  border-radius: 22px;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 4px 18px #111a;
-  transition: opacity .2s, transform .18s;
-  margin-top: 18px;
-  display: inline-block;
+.ebook-page .book-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: none;
+  display: block;
 }
-.cta-btn:hover { opacity:0.9; transform:scale(1.03) translateY(-2px); }
-.footer {
-  text-align: center;
-  color: #bbb;
-  font-size: .98em;
-  margin-top: 48px;
-  padding: 24px 2px 19px 2px;
-}
-
-/* SOCIAL PROOF */
 .ebook-page .social-proof {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 22px 0 30px 0;
 }
+
 .ebook-page .social-proof-badge {
   background: linear-gradient(90deg, #232e42 0%, #3ae374 60%, #17c0eb 100%);
   color: #222;
@@ -331,7 +278,9 @@ body, html {
   display: flex;
   align-items: center;
   gap: 9px;
+  animation: fadeInBadge 1.2s;
 }
+
 .ebook-page .stars {
   color: #ffd700;
   font-size: 1.2em;
@@ -340,39 +289,85 @@ body, html {
   font-weight: 800;
   margin-right: 8px;
   display: inline-block;
+  animation: fadeInStars 2.2s;
+}
+.ebook-hero-content .hero-desc {
+  text-align: left; /* ou 'justify' se quiser forçar as linhas até o fim */
+  font-size: 1.15em;
+  line-height: 1.45;
+  max-width: 440px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 22px;
+  margin-top: 10px;
+  padding-right: 8px;
+}
+/* Animação */
+@keyframes fadeInBadge {
+  from { opacity: 0; transform: translateY(-15px) scale(0.98);}
+  to { opacity: 1; transform: translateY(0) scale(1);}
+}
+@keyframes fadeInStars {
+  from { opacity: 0; filter: blur(2px);}
+  to   { opacity: 1; filter: blur(0);}
 }
 
 /* MOBILE ajuste */
+@media (max-width: 600px) {
+  .ebook-page .social-proof-badge {
+    padding: 10px 11px;
+    font-size: 1em;
+    border-radius: 13px;
+  }
+}
 @media (max-width: 700px) {
-  .container { max-width: 100vw !important; padding: 0 4vw; }
-  .topbar { gap: 10px; padding: 12px 0 0 0; }
-  .nav-links { gap: 4px; font-size: 1em; }
-  .lang-flags img { width: 24px; height: 24px; }
+  .container {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 700px) {
   .ebook-page .ebook-hero-card {
     flex-direction: column !important;
     align-items: center !important;
-    width: 97vw !important;
+    justify-content: center !important;
+    width: 95vw !important;         /* <--- menor que a tela */
+    max-width: 95vw !important;
     min-width: 0 !important;
-    max-width: 98vw !important;
-    border-radius: 16px !important;
-    padding: 18px 2vw 20px 2vw !important;
-    gap: 14px !important;
+    margin: 0 auto !important;      /* centraliza certinho */
+    border-radius: 19px !important; /* curvatura bonita */
+    box-sizing: border-box !important;
+    padding: 5vw 2vw 5vw 2vw !important;
+    gap: 10px !important;
+    overflow: visible !important;   /* permite o border-radius */
+    background: rgba(28,40,64,0.95) !important; /* reforça bg */
   }
   .ebook-page .ebook-hero-img img.book-cover {
     width: 88vw !important;
     max-width: 300px !important;
+    min-width: 0 !important;
     border-radius: 12px !important;
   }
   .ebook-page .ebook-hero-content {
     align-items: center !important;
-    width: 100% !important;
     text-align: justify !important;
-    padding: 0 !important;
+    font-size: 1.11em;
+    line-height: 1.55;
+    width: 92vw !important;
+    max-width: 92vw !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
   }
   .ebook-page .hero-desc {
-    max-width: 95vw !important;
-    margin: 0 !important;
-    font-size: 1em !important;
+    max-width: 91vw !important;
+    text-align: justify;
+    line-height: 1.55;
+    font-size: 1.08em;
+    margin: 0 auto;
+    word-break: break-word !important;
   }
   .ebook-page .hero-btn {
     margin: 14px auto 0 auto !important;
@@ -384,11 +379,13 @@ body, html {
     display: block !important;
     text-align: center !important;
   }
-  .ebook-page .benefit-card {
-    min-width: 92vw !important;
-    max-width: 99vw !important;
-    margin-bottom: 9px !important;
+  body, .container {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow-x: hidden !important;
   }
+}
+@media (max-width: 700px) {
   .ebook-page .about-card {
     flex-direction: column !important;
     align-items: center !important;
@@ -396,6 +393,13 @@ body, html {
     gap: 10px !important;
     max-width: 97vw !important;
     min-width: 0 !important;
+  }
+  .ebook-page .about-photo {
+    order: -1 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 18px !important;
   }
   .ebook-page .about-photo img {
     width: 120px !important;
@@ -408,131 +412,66 @@ body, html {
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    order: 2 !important;
     text-align: justify !important;
   }
+  .ebook-page .about-btn-wrap {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: 1.2em 0 0 0 !important;
+  }
 }
-/* Extra ChatGPT */
 @media (max-width: 700px) {
-  body, html {
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow-x: hidden !important;
-    width: 100vw !important;
-  }
-  .container {
-    padding: 0 !important;
-    margin: 0 auto !important;
-    width: 100vw !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    box-sizing: border-box !important;
-  }
-  
-  .benefits, .reviews {
+  .ebook-page .about-card .about-btn-wrap a,
+  .ebook-page .about-card .about-btn-wrap .cta-btn-bright {
+    width: 70vw !important;       /* Menor que o card, centralizado */
+    max-width: 200px !important;  /* Opcional: limita em desktop pequeno */
+    min-width: 110px !important;
+    margin: 18px auto 0 auto !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100vw !important;
-    box-sizing: border-box !important;
-    overflow-x: hidden !important;
-  }
-  .benefit-card, .review-card {
-    box-sizing: border-box !important;
-    max-width: 96vw !important;
-    min-width: 0 !important;
-    margin: 0 auto 18px auto !important;
-  }
-
-/* --- ABOUT CARD: Foto no topo no mobile --- */
-@media (max-width: 700px) {
-  .about-card {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px !important;
-    padding-top: 14px !important;
-    padding-bottom: 16px !important;
-  }
-  .about-photo {
-    order: -1 !important;
-    margin: 0 auto 12px auto !important;
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-  }
-  .about-photo img {
-    width: 120px !important;
-    height: 120px !important;
-    border-width: 4px !important;
-    margin: 0 auto !important;
     display: block !important;
-  }
-  .about-content {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: justify !important;
-  }
-}
-
-/* --- Corrige possíveis vazamentos dos cards para a direita --- */
-@media (max-width: 700px) {
-  .ebook-hero-card,
-  .about-card,
-  .benefit-card,
-  .review-card {
-    max-width: 96vw !important;
-    min-width: 0 !important;
+    text-align: center !important;
+    border-radius: 14px !important;
+    font-size: 1.12em !important;
     box-sizing: border-box !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    overflow: visible !important;
-  }
-}
-
-/* --- Pequeno ajuste para evitar scroll lateral --- */
-@media (max-width: 700px) {
-  body, html, .container {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-}
-  /* --- Pequeno ajuste para social-proof --- */
-@media (max-width: 700px) {
-  .social-proof {
-    width: 100vw !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-  .social-proof-badge {
-    max-width: 94vw !important;
-    width: auto !important;
-    margin: 0 auto !important;
-    border-radius: 13px !important;
-    padding-left: 9px !important;
-    padding-right: 9px !important;
-    box-sizing: border-box !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
   }
 }
 @media (max-width: 700px) {
-  .ebook-page .benefits {
-    grid-template-columns: 1fr;
-    max-width: 97vw;
-    gap: 11px;
-  }
-}
-  .benefit-card h3 {
+  .ebook-page .hero-desc {
     text-align: left !important;
-    width: 100%;
+    font-size: 0.97em !important;
+    max-width: 95vw !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+  }
+}
+@media (max-width: 900px) {
+  .ebook-hero-content .hero-desc {
+    max-width: 97vw;
+    font-size: 1em;
+    margin: 0 0 14px 0;
+    padding: 0;
+  }
+}
+/* Só no desktop: texto justificado dentro dos cards de benefício */
+.ebook-page .benefit-card {
+  text-align: justify;
+}
+
+/* Só o título continua centralizado */
+.ebook-page .benefit-card h3 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* No mobile: texto à esquerda */
+@media (max-width: 700px) {
+  .ebook-page .benefit-card {
+    text-align: left !important;
+  }
+  .ebook-page .benefit-card h3 {
+    text-align: left !important;
   }
 }
