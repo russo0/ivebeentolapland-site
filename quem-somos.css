@@ -159,29 +159,23 @@
   padding: 24px 2px 19px 2px;
 }
 
-/* ---- TOPBAR ---- */
-.about-page .topbar {
+/* TOPBAR */
+.topbar {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 0 auto 28px auto;
-  padding: 18px 0 0 0;
+  margin: 0 auto 32px auto;
+  padding: 22px 0 0 0;
   box-sizing: border-box;
   gap: 32px;
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-  z-index: 3;
-  position: relative;
-  transition: background 0.2s;
 }
-.about-page .nav-links {
+.nav-links {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.about-page .nav-links a {
+.nav-links a {
   color: #fff;
   font-weight: 700;
   text-decoration: none;
@@ -191,7 +185,7 @@
   display: inline-block;
   padding: 6px 0;
 }
-.about-page .nav-links a:not(:last-child)::after {
+.nav-links a:not(:last-child)::after {
   content: "|";
   color: #3ae374;
   margin-left: 10px;
@@ -199,49 +193,59 @@
   opacity: 0.85;
   font-size: 1em;
 }
-.about-page .nav-links a:hover { color: #3ae374; }
-.about-page .lang-flags {
+.nav-links a:hover { color: #3ae374; }
+.lang-flags {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-left: 13px;
 }
-.about-page .lang-flags img {
+.lang-flags img {
   border-radius: 50%;
   width: 32px;
   height: 32px;
   box-shadow: 0 1px 5px #1126;
   transition: transform .15s;
 }
-.about-page .lang-flags img:hover { transform: scale(1.13); }
+.lang-flags img:hover { transform: scale(1.13); }
 
-/* ---- RESPONSIVO ---- */
-@media (max-width: 900px) {
-  .about-page .topbar {
-    background: rgba(18, 23, 38, 0.80) !important;
-    box-shadow: 0 3px 12px #0004 !important;
-    border-radius: 0 0 16px 16px !important;
-    backdrop-filter: blur(3px) !important;
-    -webkit-backdrop-filter: blur(3px) !important;
-    margin-bottom: 16px !important;
+/* --- TOPBAR MOBILE --- */
+@media (max-width: 700px) {
+  .topbar {
     flex-direction: column !important;
     align-items: center !important;
-    gap: 8px !important;
-    padding: 14px 0 0 0 !important;
-    width: 100vw !important;
-    min-width: 100vw !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    z-index: 3 !important;
+    justify-content: center !important;
+    padding: 14px 0 8px 0 !important;
+    background: rgba(17, 25, 40, 0.93) !important;
+    border-radius: 0 0 18px 18px !important;
+    box-shadow: 0 3px 14px #0006 !important;
   }
-  .about-page .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-    width: 100vw;
-    font-size: 1em;
-    margin-bottom: 2px;
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    text-align: center !important;
   }
+  .nav-links a {
+    font-size: 1.08em !important;
+    padding: 5px 7px !important;
+    white-space: nowrap !important;
+    font-weight: bold !important;
+  }
+  .lang-flags {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    margin: 7px 0 0 0 !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+}
+/* ---- RESPONSIVO ---- */
+@media (max-width: 900px) {
   .about-page .about-card {
     flex-direction: column;
     align-items: center;
@@ -321,25 +325,7 @@
     background: #000 !important;
   }
 }
-@media (max-width: 900px) {
-  .about-page .topbar {
-    background: rgba(18, 23, 38, 0.81) !important;
-    backdrop-filter: blur(3px) !important;
-    -webkit-backdrop-filter: blur(3px) !important;
-    border-radius: 0 0 16px 16px !important;
-    box-shadow: 0 3px 12px #0004 !important;
-    margin-bottom: 16px !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 8px !important;
-    padding: 14px 0 0 0 !important;
-    width: 100vw !important;
-    min-width: 100vw !important;
-    box-sizing: border-box !important;
-    position: relative !important;
-    z-index: 3 !important;
-  }
-}
+
 body, html {
   overflow: visible !important;
   font-family: 'Segoe UI', Arial, sans-serif;
