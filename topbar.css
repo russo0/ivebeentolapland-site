@@ -1,6 +1,6 @@
 /* TOPBAR UNIVERSAL */
-.topbar * {
-  font-family: 'Segoe UI', Arial, sans-serif !important;
+.topbar, .topbar * {
+  font-family: 'Patua One', 'Segoe UI', Arial, sans-serif !important;
 }
 .topbar {
   display: flex;
