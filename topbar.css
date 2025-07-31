@@ -76,7 +76,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0 !important;
     width: 100%;
     text-align: center;
   }
@@ -88,7 +88,8 @@
   }
   .nav-links a:not(:last-child)::after {
     content: "|";
-    margin-left: 6px;
+    margin-left: 8px;
+    margin-right: 8px;
     font-size: 0.95em;
   }
   .lang-flags {
