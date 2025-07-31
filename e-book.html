@@ -11,15 +11,15 @@
 <body class="ebook-page">
   <!-- VÍDEO DE FUNDO (só desktop!) -->
   <div class="video-bg">
-    <iframe id="video-fundo"
-      src=""
-      frameborder="0"
-      allow="autoplay; fullscreen"
-      allowfullscreen
-      title="Aurora Timelapse"
-      tabindex="-1"></iframe>
-    <div class="video-overlay"></div>
-  </div>
+  <iframe id="video-fundo"
+    src="https://player.vimeo.com/video/1105489099?background=1&autoplay=1&loop=1&muted=1&controls=0"
+    allow="autoplay; fullscreen"
+    allowfullscreen
+    title="Aurora Timelapse"
+    frameborder="0"
+    tabindex="-1"></iframe>
+  <div class="video-overlay"></div>
+</div>
   <div class="container">
     <div class="topbar">
   <div class="nav-links">
@@ -155,12 +155,5 @@
       <br> Todas as imagens e textos são protegidos por direitos autorais.
     </div>
   </div>
-  <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      const videoDesktop = "https://player.vimeo.com/video/1105489099?background=1&autoplay=1&loop=1&muted=1&controls=0";
-      const isDesktop = window.matchMedia("(min-width: 701px)").matches;
-      document.getElementById('video-fundo').src = isDesktop ? videoDesktop : "";
-    });
-  </script>
 </body>
 </html>
