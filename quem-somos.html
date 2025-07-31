@@ -112,14 +112,16 @@
   </div>
   <!-- SCRIPT DE TROCA DE VÍDEO (NÃO REMOVER) -->
   <script>
-    function setVideo() {
-      const isMobile = window.matchMedia("(max-width: 700px)").matches;
-      const desktopVideo = "https://player.vimeo.com/video/1105489099?background=1&autoplay=1&loop=1&muted=1&controls=0";
-      const mobileVideo  = "https://player.vimeo.com/video/1105865708?background=1&autoplay=1&loop=1&muted=1&controls=0";
-      document.getElementById('video-fundo').src = isMobile ? mobileVideo : desktopVideo;
-    }
-    window.addEventListener('DOMContentLoaded', setVideo);
-    window.addEventListener('resize', setVideo);
-  </script>
+window.addEventListener('DOMContentLoaded', function() {
+  const desktopVideo = "https://player.vimeo.com/video/1105489099?background=1&autoplay=1&loop=1&muted=1&controls=0";
+  // Smartphone: largura até 700px
+  const isSmartphone = window.matchMedia("(max-width: 700px)").matches;
+  // Se NÃO for smartphone, carrega vídeo (desktop + tablet)
+  if (!isSmartphone) {
+    document.getElementById('video-fundo').src = desktopVideo;
+  }
+});
+</script>
+
 </body>
 </html>
