@@ -1,5 +1,7 @@
 /* TOPBAR UNIVERSAL */
-
+.topbar * {
+  font-family: 'Segoe UI', Arial, sans-serif !important;
+}
 .topbar {
   display: flex;
   justify-content: center;
