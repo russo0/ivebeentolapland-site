@@ -125,13 +125,6 @@ body, html {
 }
 
 /* BENEFICIOS */
-.ebook-page .benefits {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px 28px;
-  justify-items: stretch;
-  align-items: stretch;
-}
 .ebook-page .reviews {
   display: flex;
   flex-wrap: wrap;
@@ -532,10 +525,12 @@ body, html {
   }
 }
 @media (max-width: 700px) {
-  .benefit-card {
-    text-align: left !important;
-    align-items: flex-start !important;
+  .ebook-page .benefits {
+    grid-template-columns: 1fr;
+    max-width: 97vw;
+    gap: 11px;
   }
+}
   .benefit-card h3 {
     text-align: left !important;
     width: 100%;
