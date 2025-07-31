@@ -259,6 +259,7 @@ body, html {
   margin-top: 48px;
   padding: 24px 2px 19px 2px;
 }
+/* TOPBAR Mobile */
 @media (max-width: 700px) {
   .topbar {
     flex-direction: column !important;
