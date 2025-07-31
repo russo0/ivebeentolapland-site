@@ -3,6 +3,40 @@
    ======================== */
 
 /* Topbar (herda dos outros, só ajuste se precisar!) */
+.topbar {
+  width: 100%;
+  background: #131a27dd;
+  padding: 20px 0 10px 0;
+  border-radius: 0 0 32px 32px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.topbar .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1.38em;
+  font-weight: bold;
+  text-transform: none;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.topbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: none;
+  padding: 0 4px;
+}
+@media (max-width: 700px) {
+  .topbar .nav-links {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 1.09em;
+  }
+}
 
 /* Títulos e intro */
 .reviews-page .reviews-title, 
