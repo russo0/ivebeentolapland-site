@@ -321,3 +321,33 @@ html, body {
     padding: 18px 5vw 15px 5vw;
   }
 }
+@media (max-width: 700px) {
+  .topbar {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    padding: 10px 0 2px 0 !important;
+    border-radius: 0 0 15px 15px !important;
+    background: rgba(20,30,50,0.91) !important;
+  }
+  .nav-links {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 7px !important;
+    margin-bottom: 6px !important;
+  }
+  .lang-flags {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin: 0 !important;
+  }
+  .lang-flags img {
+    width: 29px !important;
+    height: 29px !important;
+    margin-bottom: 2px !important;
+  }
+}
