@@ -75,6 +75,22 @@ html, body {
   color: #fff;
   margin-bottom: 8px;
 }
+.topbar .nav-links a {
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0 4px;
+}
+.topbar .nav-links a:visited,
+.topbar .nav-links a:active,
+.topbar .nav-links a:focus {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+.topbar {
+  background: rgba(19, 26, 39, 0.84) !important;
+}
 .topbar .nav-links a:not(:last-child)::after {
   content: " |";
   color: #18e89b;
@@ -247,11 +263,20 @@ html, body {
 
 /* MOBILE AJUSTES */
 @media (max-width: 700px) {
+  topbar {
+    background: rgba(19, 26, 39, 0.73) !important;
+    padding: 16px 0 7px 0;
+    border-radius: 0 0 19px 19px;
+    margin-bottom: 13px;
+  }
   .topbar .nav-links {
     flex-direction: column;
-    gap: 7px;
-    font-size: 1.07em;
-    margin-bottom: 3px;
+    gap: 5px;
+    font-size: 1.13em;
+  }
+  .topbar .nav-links a:not(:last-child)::after {
+    content: "";  /* Remove o separador no mobile! */
+    margin: 0;
   }
   .container.reviews-page {
     padding: 0 0 22px 0;
