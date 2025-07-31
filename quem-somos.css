@@ -381,7 +381,13 @@ body, html {
     margin-bottom: 2px;
   }
 }
-body, .about-page .container, .about-page .topbar {
+body, .container.about-page, .container.reviews-page {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
+
+.topbar {
+  margin: 0 auto 32px auto !important;
+  padding: 22px 0 0 0 !important;
+}
+
