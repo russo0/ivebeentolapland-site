@@ -127,38 +127,50 @@ html, body {
   transform: scale(1.03) translateY(-2px);
 }
 
-/* -------- BENEFÍCIOS (GRID) -------- */
+/* ====== BENEFITS GRID ====== */
 .ebook-page .benefits {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 42px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto 40px auto;
+  max-width: 660px;
 }
+
+/* ====== BENEFIT CARD ====== */
 .ebook-page .benefit-card {
   background: rgba(40,60,90,0.97);
-  border-radius: 26px;  /* Mais quadradinho e arredondado */
-  padding: 23px 21px 18px 21px;
+  border-radius: 18px;
   box-shadow: 0 2px 18px #0004;
-  text-align: center;
-  color: #e8e8e8;
+  padding: 20px 17px 18px 17px;
+  min-width: 0; /* CRUCIAL! */
+  max-width: 320px;
+  min-height: 185px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.ebook-page .benefit-card .emoji {
-  font-size: 2.2em;
-  margin-bottom: 10px;
-}
-.ebook-page .benefit-card h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.19em;
-  font-weight: 900;
-  color: #aaffd7 !important;
-  letter-spacing: 0.5px;
-  line-height: 1.23;
-  text-shadow: 0 3px 12px #151a40, 0 2px 8px #21c0eb99, 0 1px 6px #3ae37480;
+  justify-content: flex-start;
+  text-align: center;
+  color: #e8e8e8;
+  font-size: 1.04em;
 }
 
+/* Emoji e título */
+.ebook-page .benefit-card .emoji {
+  font-size: 2em;
+  margin-bottom: 10px;
+  display: block;
+}
+.ebook-page .benefit-card h3 {
+  margin: 0 0 9px 0;
+  font-size: 1.12em;
+  font-weight: 900;
+  color: #aaffd7 !important;
+  letter-spacing: 0.4px;
+  line-height: 1.22;
+  text-shadow: 0 3px 12px #151a40, 0 2px 8px #21c0eb99, 0 1px 6px #3ae37480;
+}
 /* -------- REVIEWS (GRID) -------- */
 .ebook-page .reviews-title {
   margin-top: 56px;
@@ -424,5 +436,28 @@ html, body {
     align-items: flex-start !important;
     border-radius: 22px !important; /* Mais arredondado no mobile */
     padding: 23px 17px 18px 17px !important;
+  }
+}
+/* ====== MOBILE: 1 COLUNA E NÃO CORTA ====== */
+@media (max-width: 700px) {
+  .ebook-page .benefits {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 98vw;
+    padding: 0 2vw;
+    margin-bottom: 24px;
+  }
+  .ebook-page .benefit-card {
+    max-width: 100vw;
+    min-width: 0;
+    border-radius: 19px;
+    padding: 19px 10px 15px 14px;
+    margin: 0 auto;
+    font-size: 1em;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .ebook-page .benefit-card .emoji {
+    margin-left: 0px;
   }
 }
