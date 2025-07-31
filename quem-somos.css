@@ -338,64 +338,6 @@ body, html {
   overflow: visible !important;
   font-family: 'Segoe UI', Arial, sans-serif;
 }
-/* EXTRA TOPBAR TO FIX*/
-.topbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 32px;
-  margin: 0 auto 32px auto;
-  padding: 22px 0 0 0;
-  box-sizing: border-box;
-  background: rgba(19, 26, 39, 0.89);
-  border-radius: 0 0 32px 32px;
-  box-shadow: 0 8px 34px #1116;
-  position: relative;
-  z-index: 5;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 0;
-}
-.nav-links a {
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.13em;
-  letter-spacing: 0.01em;
-  transition: color 0.16s;
-  display: inline-block;
-  padding: 6px 0 6px 0;
-  position: relative;
-}
-.nav-links a:not(:last-child)::after {
-  content: "|";
-  color: #3ae374;
-  margin-left: 10px;
-  font-weight: 600;
-  opacity: 0.85;
-  font-size: 1em;
-  position: relative;
-  top: 0;
-}
-.nav-links a:hover { color: #3ae374; }
-
-.lang-flags {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 13px;
-}
-.lang-flags img {
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  box-shadow: 0 1px 5px #1126;
-  transition: transform .15s;
-}
-.lang-flags img:hover { transform: scale(1.13); }
 
 /* ------ MOBILE ------ */
 @media (max-width: 700px) {
