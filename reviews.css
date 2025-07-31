@@ -55,21 +55,23 @@ html, body {
 }
 
 /* TOPBAR */
+/* TOPBAR */
 .topbar {
   width: 100%;
-  background: #131a27e3;
-  padding: 20px 0 10px 0;
+  background: rgba(19, 26, 39, 0.83);
+  padding: 18px 0 10px 0;
   border-radius: 0 0 32px 32px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   text-align: center;
   box-shadow: 0 8px 34px #1116;
+  font-family: 'Segoe UI', Arial, sans-serif !important;
 }
 .topbar .nav-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
-  font-size: 1.32em;
+  gap: 13px;
+  font-size: 1.08em;
   font-weight: bold;
   text-transform: none;
   color: #fff;
@@ -81,15 +83,7 @@ html, body {
   font-weight: bold;
   font-size: 1em;
   padding: 0 4px;
-}
-.topbar .nav-links a:visited,
-.topbar .nav-links a:active,
-.topbar .nav-links a:focus {
-  color: #fff !important;
-  text-decoration: none !important;
-}
-.topbar {
-  background: rgba(19, 26, 39, 0.84) !important;
+  transition: color .13s;
 }
 .topbar .nav-links a:not(:last-child)::after {
   content: " |";
@@ -97,15 +91,19 @@ html, body {
   font-weight: bold;
   margin-left: 4px;
   margin-right: 4px;
+  pointer-events: none;
 }
-.topbar, .container.reviews-page, .review-card, .hero-title, .reviews-title {
-  font-family: 'Segoe UI', Arial, sans-serif !important;
+.topbar .nav-links a:visited,
+.topbar .nav-links a:active,
+.topbar .nav-links a:focus {
+  color: #fff !important;
+  text-decoration: none !important;
 }
 .topbar .lang-flags {
-  margin-top: 7px;
+  margin-top: 6px;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 9px;
 }
 
 /* HERO TITLE/INTRO */
@@ -263,20 +261,29 @@ html, body {
 
 /* MOBILE AJUSTES */
 @media (max-width: 700px) {
-  topbar {
-    background: rgba(19, 26, 39, 0.73) !important;
-    padding: 16px 0 7px 0;
+  @media (max-width: 700px) {
+  .topbar {
+    background: rgba(19, 26, 39, 0.71) !important;
+    padding: 11px 0 7px 0;
     border-radius: 0 0 19px 19px;
-    margin-bottom: 13px;
+    margin-bottom: 10px;
   }
   .topbar .nav-links {
-    flex-direction: column;
-    gap: 5px;
-    font-size: 1.13em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    font-size: 1.02em;
+  }
+  .topbar .nav-links a {
+    padding: 0 4px;
+    margin-bottom: 1px;
   }
   .topbar .nav-links a:not(:last-child)::after {
-    content: "";  /* Remove o separador no mobile! */
-    margin: 0;
+    content: "|";
+    color: #18e89b;
+    margin-left: 4px;
+    margin-right: 4px;
   }
   .container.reviews-page {
     padding: 0 0 22px 0;
