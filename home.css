@@ -14,61 +14,6 @@ body {
   margin: 0 auto;
   padding: 0 10px 40px 10px;
 }
-
-/* TOPBAR */
-.topbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto 32px auto;
-  padding: 22px 0 0 0;
-  gap: 32px;
-  background: rgba(18,22,35, 0.73);
-  border-radius: 0 0 18px 18px;
-  box-shadow: 0 3px 12px #0005;
-  position: relative;
-  z-index: 5;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.nav-links a {
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.13em;
-  letter-spacing: 0.01em;
-  transition: color 0.16s;
-  display: inline-block;
-  padding: 6px 0;
-}
-.nav-links a:not(:last-child)::after {
-  content: "|";
-  color: #3ae374;
-  margin-left: 10px;
-  font-weight: 600;
-  opacity: 0.85;
-  font-size: 1em;
-}
-.nav-links a:hover { color: #3ae374; }
-.lang-flags {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 13px;
-}
-.lang-flags img {
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  box-shadow: 0 1px 5px #1126;
-  transition: transform .15s;
-}
-.lang-flags img:hover { transform: scale(1.13); }
-
 /* Footer e CTA padrão */
 .cta-final {
   margin: 58px auto 0 auto;
@@ -191,35 +136,4 @@ body {
 @keyframes fadeInProfile {
   from { opacity: 0; transform: scale(0.94) translateY(34px);}
   to   { opacity: 1; transform: scale(1) translateY(0);}
-}
-/* --- TOPBAR MOBILE --- */
-@media (max-width: 700px) {
-  .topbar {
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 0 !important;
-    padding: 10px 0 2px 0 !important;
-    border-radius: 0 0 15px 15px !important;
-    background: rgba(20,30,50,0.91) !important;
-  }
-  .nav-links {
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 7px !important;
-    margin-bottom: 6px !important;
-  }
-  .lang-flags {
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 10px !important;
-    margin: 0 !important;
-  }
-  .lang-flags img {
-    width: 29px !important;
-    height: 29px !important;
-    margin-bottom: 2px !important;
-  }
 }
