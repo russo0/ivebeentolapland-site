@@ -1,10 +1,12 @@
-body, html {
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+
+html, body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
   background: #111928;
   color: #fff;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Patua One', 'Segoe UI', Arial, sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -15,7 +17,8 @@ body, html {
   position: relative;
   z-index: 2;
 }
-/* VIDEO DE FUNDO */
+
+/* ----- VÍDEO DE FUNDO ----- */
 .video-bg {
   display: block;
   position: fixed;
@@ -45,11 +48,11 @@ body, html {
   z-index: 1;
   pointer-events: none;
 }
-/* Some o vídeo no mobile */
 @media (max-width: 700px) {
   .video-bg { display: none !important; }
 }
-/* HERO */
+
+/* -------- HERO -------- */
 .ebook-page .hero {
   margin-top: 26px;
   margin-bottom: 36px;
@@ -124,13 +127,11 @@ body, html {
   transform: scale(1.03) translateY(-2px);
 }
 
-/* BENEFICIOS */
+/* -------- BENEFÍCIOS (GRID) -------- */
 .ebook-page .benefits {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  justify-content: center;
-  align-items: stretch;
   margin-bottom: 42px;
 }
 .ebook-page .benefit-card {
@@ -147,7 +148,6 @@ body, html {
 .ebook-page .benefit-card .emoji {
   font-size: 2.2em;
   margin-bottom: 10px;
-  display: block;
 }
 .ebook-page .benefit-card h3 {
   margin: 0 0 10px 0;
@@ -158,7 +158,8 @@ body, html {
   line-height: 1.23;
   text-shadow: 0 3px 12px #151a40, 0 2px 8px #21c0eb99, 0 1px 6px #3ae37480;
 }
-/* REVIEWS */
+
+/* -------- REVIEWS (GRID) -------- */
 .ebook-page .reviews-title {
   margin-top: 56px;
   margin-bottom: 17px;
@@ -172,8 +173,6 @@ body, html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  justify-content: center;
-  align-items: stretch;
   margin-bottom: 42px;
 }
 .ebook-page .review-card {
@@ -207,7 +206,7 @@ body, html {
   display: block;
 }
 
-/* CARD SOBRE */
+/* -------- CARD SOBRE -------- */
 .ebook-page .about-card {
   background: linear-gradient(90deg, #282e3a 0%, #243c62 70%, #1cb5e0 100%);
   max-width: 670px;
@@ -287,7 +286,7 @@ body, html {
   transform: translateY(-2px) scale(1.03);
 }
 
-/* Footer e CTA padrão */
+/* -------- Footer e CTA padrão -------- */
 .cta-final {
   margin: 58px auto 0 auto;
   text-align: center;
@@ -315,7 +314,7 @@ body, html {
   padding: 24px 2px 19px 2px;
 }
 
-/* SOCIAL PROOF */
+/* -------- SOCIAL PROOF -------- */
 .ebook-page .social-proof {
   display: flex;
   justify-content: center;
@@ -345,91 +344,77 @@ body, html {
   display: inline-block;
 }
 
-/* ----------- MOBILE ajuste ----------- */
+/* -------- MOBILE -------- */
 @media (max-width: 700px) {
-  .container { max-width: 100vw !important; padding: 0 4vw; }
-  .ebook-page .hero-title { font-size: 1.25em !important; }
-  .ebook-page .hero { margin-top: 10px !important; }
+  .container { max-width: 100vw; padding: 0 4vw; }
+  .ebook-page .hero-title { font-size: 1.25em; }
+  .ebook-page .hero { margin-top: 10px; }
   .ebook-page .ebook-hero-card {
-    flex-direction: column !important;
-    align-items: center !important;
-    width: 97vw !important;
-    min-width: 0 !important;
-    max-width: 98vw !important;
-    border-radius: 16px !important;
-    padding: 18px 2vw 20px 2vw !important;
-    gap: 14px !important;
+    flex-direction: column;
+    align-items: center;
+    width: 97vw;
+    min-width: 0;
+    max-width: 98vw;
+    border-radius: 16px;
+    padding: 18px 2vw 20px 2vw;
+    gap: 14px;
   }
   .ebook-page .ebook-hero-img img.book-cover {
-    width: 88vw !important;
-    max-width: 300px !important;
-    border-radius: 12px !important;
-  }
-  .ebook-page .ebook-hero-content {
-    align-items: center !important;
-    width: 100% !important;
-    text-align: justify !important;
-    padding: 0 !important;
-  }
-  .ebook-page .hero-desc {
-    max-width: 95vw !important;
-    margin: 0 !important;
-    font-size: 1em !important;
+    width: 88vw;
+    max-width: 300px;
+    border-radius: 12px;
   }
   .ebook-page .hero-btn {
-    margin: 14px auto 0 auto !important;
-    width: 80vw !important;
-    min-width: 120px !important;
-    max-width: 300px !important;
-    font-size: 1.02em !important;
-    padding: 13px 0 !important;
-    display: block !important;
-    text-align: center !important;
+    width: 80vw;
+    max-width: 300px;
+    font-size: 1.02em;
+    padding: 13px 0;
+    display: block;
+    text-align: center;
+    margin: 14px auto 0 auto;
   }
-  .ebook-page .benefits {
+  .ebook-page .benefits,
+  .ebook-page .reviews {
     grid-template-columns: 1fr !important;
     gap: 14px !important;
   }
-  .ebook-page .benefit-card {
-    min-width: 92vw !important;
-    max-width: 99vw !important;
-    margin-bottom: 9px !important;
+  .ebook-page .benefit-card,
+  .ebook-page .review-card {
+    min-width: 92vw;
+    max-width: 99vw;
+    margin-bottom: 9px;
   }
   .ebook-page .about-card {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px !important;
-    padding-top: 14px !important;
-    padding-bottom: 16px !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 14px;
+    padding-bottom: 16px;
+    max-width: 97vw;
+    min-width: 0;
   }
   .ebook-page .about-photo {
-    order: -1 !important;
-    margin: 0 auto 12px auto !important;
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
+    order: -1;
+    margin: 0 auto 12px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .ebook-page .about-photo img {
-    width: 120px !important;
-    height: 120px !important;
-    border-width: 4px !important;
-    margin: 0 auto !important;
-    display: block !important;
-  }
-  .ebook-page .about-content {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: justify !important;
+    width: 120px;
+    height: 120px;
+    border-width: 4px;
+    margin: 0 auto;
+    display: block;
   }
 }
-}
-/* --- Pequeno ajuste para evitar scroll lateral --- */
+
+/* Pequeno ajuste para evitar scroll lateral */
 @media (max-width: 700px) {
-  body, html, .container {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    padding: 0 !important;
-    margin: 0 !important;
+  html, body, .container {
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
   }
 }
