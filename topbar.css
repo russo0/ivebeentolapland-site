@@ -18,44 +18,38 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0; /* gap controlado no margin dos links */
+  gap: 0;
 }
 
 .nav-links a {
   font-family: 'Patua One', 'Segoe UI', Arial, sans-serif;
   color: #fff;
   font-weight: 700;
-  font-size: 1.6em;
+  font-size: 1.3em;        /* Tamanho menor, igual ao site original */
   text-decoration: none;
-  margin: 0 12px;
-  padding: 6px 0;
+  margin: 0 6px;
+  padding: 4px 0;
   letter-spacing: 0.01em;
   transition: color 0.16s;
   display: flex;
   align-items: center;
   position: relative;
+  line-height: 1.0;
 }
 
 .nav-links a + a::before {
   content: "|";
-  color: #3ae374;
+  color: #2ecc71;
   font-weight: 600;
-  opacity: 0.85;
-  margin: 0 12px 0 0;
-  font-size: 1em;
-  /* --- Nova mágica: alinhamento com flexbox --- */
+  opacity: 0.88;
+  margin: 0 10px 0 0;
+  font-size: 1.14em;
   display: inline-block;
-  transform: translateY(2px); /* Ajuste fino se precisar, pode ser 1~3px */
+  line-height: 1;
+  transform: translateY(1px);
 }
-
 .nav-links a:hover {
   color: #3ae374;
-}
-.lang-flags {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 13px;
 }
 
 .lang-flags img {
@@ -86,13 +80,14 @@
     gap: 0;
   }
   .nav-links a {
-    font-size: 1.11em;
-    margin: 0 7px;
+    font-size: 1.01em;
+    margin: 0 3px;
+    padding: 2px 0;
   }
   .nav-links a + a::before {
-    margin: 0 8px 0 0;
-    font-size: 1.13em;
-    transform: translateY(2px);
+    margin: 0 5px 0 0;
+    font-size: 1.09em;
+    transform: translateY(1px);
   }
   .lang-flags {
     flex-direction: row;
