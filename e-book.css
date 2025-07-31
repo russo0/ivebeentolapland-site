@@ -181,43 +181,49 @@ html, body {
   font-weight: bold;
   letter-spacing: 1px;
 }
+/* ====== REVIEWS GRID ====== */
 .ebook-page .reviews {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 42px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto 40px auto;
+  max-width: 660px;
 }
+
+/* ====== REVIEW CARD ====== */
 .ebook-page .review-card {
   background: linear-gradient(90deg,#3ae374 0%,#17c0eb 70%,#7158e2 100%);
   color: #fff;
-  border-radius: 14px;
+  border-radius: 18px;
   box-shadow: 0 2px 12px #122a7e38;
-  padding: 19px 19px 15px 19px;
-  font-size: 1.08em;
-  position: relative;
-  text-align: left;
+  padding: 19px 17px 15px 17px;
+  min-width: 0;
+  max-width: 320px;
+  min-height: 110px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
+  font-size: 1.04em;
+  position: relative;
 }
 .ebook-page .review-card .stars {
   color: #ffd700;
-  font-size: 1.2em;
+  font-size: 1.19em;
   margin-bottom: 7px;
-  display: block;
-  align-self: center;
-  text-align: center;
-  width: 100%;
+  font-weight: 900;
+  text-shadow: 0 2px 8px #fff7, 0 1px 6px #7158e2cc;
 }
 .ebook-page .review-card .author {
-  font-size: .96em;
-  margin-top: 14px;
+  font-size: .99em;
+  margin-top: 13px;
   color: #fffbe9;
   font-weight: 700;
   text-align: left;
   display: block;
 }
-
 /* -------- CARD SOBRE -------- */
 .ebook-page .about-card {
   background: linear-gradient(90deg, #282e3a 0%, #243c62 70%, #1cb5e0 100%);
@@ -459,5 +465,25 @@ html, body {
   }
   .ebook-page .benefit-card .emoji {
     margin-left: 0px;
+  }
+}
+/* ====== MOBILE: 1 COLUNA, ALINHADO À ESQUERDA, SEM CORTE ====== */
+@media (max-width: 700px) {
+  .ebook-page .reviews {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 98vw;
+    padding: 0 2vw;
+    margin-bottom: 24px;
+  }
+  .ebook-page .review-card {
+    max-width: 100vw;
+    min-width: 0;
+    border-radius: 19px;
+    padding: 18px 10px 13px 14px;
+    margin: 0 auto;
+    font-size: 1em;
+    align-items: flex-start;
+    text-align: left;
   }
 }
