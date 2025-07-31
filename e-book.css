@@ -125,7 +125,13 @@ body, html {
 }
 
 /* BENEFICIOS */
-.ebook-page .benefits,
+.ebook-page .benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 28px;
+  justify-items: stretch;
+  align-items: stretch;
+}
 .ebook-page .reviews {
   display: flex;
   flex-wrap: wrap;
