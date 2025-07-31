@@ -75,12 +75,15 @@ html, body {
   color: #fff;
   margin-bottom: 8px;
 }
-.topbar .nav-links a {
-  color: #fff;
-  text-decoration: none;
+.topbar .nav-links a:not(:last-child)::after {
+  content: " |";
+  color: #18e89b;
   font-weight: bold;
-  font-size: 1em;
-  padding: 0 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.topbar, .container.reviews-page, .review-card, .hero-title, .reviews-title {
+  font-family: 'Segoe UI', Arial, sans-serif !important;
 }
 .topbar .lang-flags {
   margin-top: 7px;
