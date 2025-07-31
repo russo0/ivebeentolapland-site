@@ -1,0 +1,189 @@
+/* ========================
+   REVIEWS PAGE EXCLUSIVO
+   ======================== */
+
+/* Topbar (herda dos outros, só ajuste se precisar!) */
+
+/* Títulos e intro */
+.reviews-page .reviews-title, 
+.reviews-page .hero-title {
+  background: linear-gradient(90deg, #3ae374 0%, #17c0eb 60%, #7158e2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+.reviews-page .reviews-intro {
+  margin: 0 auto 24px auto;
+  max-width: 640px;
+  font-size: 1.15em;
+  line-height: 1.52;
+  font-weight: 500;
+  color: #fff;
+  text-align: justify;
+}
+@media (max-width: 700px) {
+  .reviews-page .reviews-intro {
+    text-align: left !important;
+    font-size: 1em !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Social Proof Badge */
+.reviews-page .reviews-social-proof {
+  background: linear-gradient(90deg,#FFA801 60%,#FFD700 100%);
+  color: #232323;
+  border-radius: 40px;
+  padding: 9px 28px 9px 22px;
+  box-shadow: 0 4px 14px 0 #0001;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 7px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.desktop-only { display: inline; }
+.mobile-only { display: none; }
+@media (max-width: 600px) {
+  .desktop-only { display: none !important; }
+  .mobile-only  { display: inline-block !important; }
+  .reviews-page .reviews-social-proof {
+    width: auto !important;
+    max-width: 100% !important;
+    padding-left: 3vw !important;
+    padding-right: 3vw !important;
+    padding-top: 11px !important;
+    padding-bottom: 11px !important;
+    border-radius: 16px !important;
+    font-size: 1.05em !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.3em !important;
+    min-width: 0 !important;
+    overflow-wrap: anywhere;
+  }
+  .reviews-page .reviews-social-proof .stars {
+    margin-bottom: 2px !important;
+    margin-top: 2px !important;
+    font-size: 1.22em !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+/* Grid e cards */
+.reviews-page .reviews-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 44px;
+  margin-top: 18px;
+}
+.reviews-page .review-card {
+  background: linear-gradient(90deg,#3ae374 0%,#17c0eb 70%,#7158e2 100%);
+  color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #122a7e38;
+  max-width: 340px; min-width: 210px;
+  padding: 19px 19px 15px 19px;
+  font-size: 1.08em;
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 6px;
+  animation: fadeInBadge 1.1s;
+}
+.reviews-page .review-card .stars {
+  color: #ffd700;
+  font-size: 1.2em;
+  margin-bottom: 7px;
+  display: block;
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+.reviews-page .review-card .author {
+  font-size: .96em;
+  margin-top: 14px;
+  color: #fffbe9;
+  font-weight: 700;
+  text-align: left;
+  display: block;
+}
+@media (max-width: 600px) {
+  .reviews-page .reviews-grid {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .reviews-page .review-card {
+    max-width: 97vw;
+    min-width: 0;
+    font-size: 1em;
+  }
+}
+
+/* Final CTA e Footer — aproveite estilos do site ou ajuste aqui se quiser */
+.cta-final {
+  margin: 40px auto 0 auto;
+  max-width: 400px;
+  text-align: center;
+  font-weight: 600;
+}
+.cta-btn,
+.cta-btn-gold {
+  display: inline-block;
+  background: linear-gradient(90deg,#FFA801 60%,#FFD700 100%);
+  color: #232323 !important;
+  border-radius: 12px;
+  font-size: 1.12em;
+  padding: 12px 40px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 14px auto 0 auto;
+  box-shadow: 0 3px 14px #FFD70099;
+  transition: background 0.16s, color 0.16s, transform 0.13s;
+}
+.cta-btn-gold:hover {
+  background: linear-gradient(90deg,#FFD700 0%,#FFA801 100%);
+  color: #232323 !important;
+  transform: translateY(-2px) scale(1.03);
+}
+.footer {
+  text-align: center;
+  color: #bbb;
+  font-size: .98em;
+  margin-top: 48px;
+  padding: 24px 2px 19px 2px;
+}
+
+/* Animação fade-in */
+@keyframes fadeInBadge {
+  from { opacity: 0; transform: translateY(-15px) scale(0.98);}
+  to { opacity: 1; transform: translateY(0) scale(1);}
+}
