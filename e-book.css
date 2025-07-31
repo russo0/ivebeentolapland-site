@@ -168,15 +168,21 @@ body, html {
   font-weight: bold;
   letter-spacing: 1px;
 }
+.ebook-page .reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 42px;
+}
 .ebook-page .review-card {
   background: linear-gradient(90deg,#3ae374 0%,#17c0eb 70%,#7158e2 100%);
   color: #fff;
   border-radius: 14px;
   box-shadow: 0 2px 12px #122a7e38;
-  max-width: 350px; min-width: 210px;
   padding: 19px 19px 15px 19px;
   font-size: 1.08em;
-  margin-bottom: 10px;
   position: relative;
   text-align: left;
   display: flex;
@@ -392,10 +398,16 @@ body, html {
   .ebook-page .about-card {
     flex-direction: column !important;
     align-items: center !important;
-    padding: 20px 3vw 20px 3vw !important;
     gap: 10px !important;
-    max-width: 97vw !important;
-    min-width: 0 !important;
+    padding-top: 14px !important;
+    padding-bottom: 16px !important;
+  }
+  .ebook-page .about-photo {
+    order: -1 !important;
+    margin: 0 auto 12px auto !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
   }
   .ebook-page .about-photo img {
     width: 120px !important;
@@ -410,6 +422,7 @@ body, html {
     padding: 0 !important;
     text-align: justify !important;
   }
+}
 }
 /* --- Pequeno ajuste para evitar scroll lateral --- */
 @media (max-width: 700px) {
