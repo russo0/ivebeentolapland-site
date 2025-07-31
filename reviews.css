@@ -54,7 +54,7 @@ html, body {
   box-sizing: border-box;
 }
 
-/* TOPBAR PADRÃO */
+/* TOPBAR */
 .topbar {
   width: 100%;
   background: rgba(19, 26, 39, 0.88);
@@ -75,30 +75,31 @@ html, body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0;
-  margin: 0 auto;
-  padding: 0 0 0 18px;
-  font-size: 1.12em;
+  font-size: 1.08em;
   font-weight: 700;
+  margin: 0 auto;
+  padding: 0 0 0 14px;
+  gap: 0;
 }
 
 .topbar .nav-links a {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
-  padding: 0 14px 0 0;
+  padding: 0 13px 0 0;
+  font-size: 1em;
   position: relative;
   transition: color 0.18s;
-  font-size: 1em;
 }
 
 .topbar .nav-links a:not(:last-child)::after {
   content: "|";
   color: #17e5a6;
   font-weight: 800;
-  margin-left: 12px;
+  margin-left: 11px;
   margin-right: 2px;
   font-size: 1.08em;
+  pointer-events: none;
 }
 
 .topbar .nav-links a:last-child {
@@ -112,6 +113,51 @@ html, body {
   margin-right: 22px;
   margin-top: 2px;
 }
+
+/* MOBILE (mantém os | separadores, centraliza tudo) */
+@media (max-width: 900px) {
+  .topbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 6px 0;
+    border-radius: 0 0 18px 18px;
+  }
+  .topbar .nav-links {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.09em;
+    padding-left: 0;
+    margin-bottom: 4px;
+    gap: 0;
+  }
+  .topbar .nav-links a {
+    padding: 0;
+    font-size: 1.11em;
+    margin-bottom: 1px;
+    margin-top: 1px;
+  }
+  .topbar .nav-links a:not(:last-child)::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 12px;
+    margin-right: 2px;
+    color: #18e89b;
+    font-weight: 800;
+    font-size: 1.09em;
+    position: relative;
+    top: -0.5px;
+    pointer-events: none;
+  }
+  .topbar .lang-flags {
+    margin-top: 11px;
+    margin-bottom: 2px;
+    margin-right: 0;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+  }
+}
+
 /* HERO TITLE/INTRO */
 .reviews-page .hero-title {
   background: linear-gradient(90deg, #3ae374 0%, #17c0eb 55%, #7158e2 100%);
@@ -291,51 +337,5 @@ html, body {
   .cta-final {
     max-width: 97vw;
     padding: 18px 5vw 15px 5vw;
-  }
-}
-
-@media (max-width: 700px) {
-  .topbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0 5px 0;
-    border-radius: 0 0 17px 17px;
-    margin-bottom: 10px;
-  }
-  .topbar .nav-links {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-    gap: 2px;
-    margin: 0 auto;
-    padding: 0;
-  }
-  .topbar .nav-links a {
-    padding: 0 0 0 0;
-    font-size: 1.04em;
-  }
-  .topbar .nav-links a:not(:last-child)::after {
-    content: "";
-    margin: 0;
-  }
-  .topbar .lang-flags {
-    margin-top: 8px;
-    margin-bottom: 1px;
-    margin-right: 0;
-    justify-content: center;
-    gap: 14px;
-    width: 100%;
-  }
-}
-
-/* Corrige espaçamento e alinhamento extra */
-@media (max-width: 420px) {
-  .topbar {
-    padding: 7px 0 4px 0;
-  }
-  .topbar .lang-flags {
-    margin-top: 4px;
-    gap: 8px;
   }
 }
