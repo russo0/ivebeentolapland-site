@@ -1,48 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JGXX7C10MP"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JGXX7C10MP');
+</script> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | I've Been to Lapland</title>
   <link rel="stylesheet" href="topbar.css">
   <link rel="stylesheet" href="quem-somos.css">
   <link href="https://fonts.googleapis.com/css?family=Patua+One&display=swap" rel="stylesheet">
-  <style>
-    /* VIDEO CENTERED ON ALL SCREENS */
-    .video-bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      z-index: 0;
-      pointer-events: none;
-    }
-    #video-fundo {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 177.77vh;
-      height: 100vh;
-      min-width: 100vw;
-      min-height: 56.25vw;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      pointer-events: none;
-      filter: brightness(0.8) blur(0.2px);
-      border: none;
-      background: #000;
-      display: block;
-      z-index: 0;
-    }
-    .video-bg .video-overlay {
-      position: absolute;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      background: linear-gradient(180deg, rgba(9,16,32,0.13) 0%, rgba(9,16,32,0.18) 100%);
-      z-index: 1;
-      pointer-events: none;
-    }
-  </style>
 </head>
 <body class="about-page">
   <!-- BACKGROUND VIDEO -->
@@ -51,7 +23,7 @@
       src="https://player.vimeo.com/video/1106557127?background=1&autoplay=1&loop=1&muted=1&controls=0"
       allow="autoplay; fullscreen"
       allowfullscreen
-      title="Aurora Timelapse"
+      title="Aurora G4 Kangosjarvi"
       frameborder="0"
       tabindex="-1"></iframe>
     <div class="video-overlay"></div>
@@ -111,16 +83,5 @@
       <br> All images and texts are copyright protected.
     </div>
   </div>
-  <!-- VIDEO SWITCH SCRIPT (DO NOT REMOVE) -->
-  <script>
-window.addEventListener('DOMContentLoaded', function() {
-  const desktopVideo = "https://player.vimeo.com/video/1106557127?background=1&autoplay=1&loop=1&muted=1&controls=0";
-  const isSmartphone = window.matchMedia("(max-width: 700px)").matches;
-  if (!isSmartphone) {
-    document.getElementById('video-fundo').src = desktopVideo;
-  }
-});
-</script>
-
 </body>
 </html>
