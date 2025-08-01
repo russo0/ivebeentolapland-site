@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
-/* ---- VIDEO DE FUNDO ---- */
+/* RESET E FUNDO GERAL */
+html, body {
+  height: 100%;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #141c2b !important;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-sizing: border-box;
+}
+/* VIDEO DE FUNDO */
 .video-bg {
   position: fixed;
   top: 0; left: 0;
@@ -9,31 +21,28 @@
   z-index: 0;
   pointer-events: none;
 }
-#video-fundo {
+.video-bg iframe {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 177.77vh;
+  top: 50%; left: 50%;
+  width: 177.77vh; /* Para 16:9 */
   height: 100vh;
   min-width: 100vw;
   min-height: 56.25vw;
   transform: translate(-50%, -50%);
   object-fit: cover;
   pointer-events: none;
-  filter: brightness(0.8) blur(0.2px);
+  filter: brightness(0.77) blur(0.5px);
   border: none;
   background: #000;
-  display: block;
   z-index: 0;
 }
 .video-bg .video-overlay {
   position: absolute;
   top: 0; left: 0; width: 100vw; height: 100vh;
-  background: linear-gradient(180deg, rgba(9,16,32,0.13) 0%, rgba(9,16,32,0.18) 100%);
+  background: linear-gradient(180deg, rgba(9,16,32,0.18) 0%, rgba(9,16,32,0.17) 100%);
   z-index: 1;
   pointer-events: none;
 }
-
 /* ---- CONTAINER & CARD ---- */
 .about-page .container {
   max-width: 900px;
@@ -222,22 +231,6 @@
     min-width: 0;
     box-sizing: border-box;
     text-align: center;
-  }
-}
-@supports (-webkit-touch-callout: none) {
-  .video-bg, #video-fundo {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    min-width: 100vw !important;
-    min-height: 100vh !important;
-    transform: none !important;
-    object-fit: cover !important;
-    z-index: 0 !important;
-    pointer-events: none !important;
-    background: #000 !important;
   }
 }
 body, html {
