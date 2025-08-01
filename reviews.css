@@ -100,7 +100,8 @@ html, body {
   text-align: center;
 }
 .reviews-social-proof .stars {
-  color: #FFD700;
+  color: #FFD600;
+  filter: drop-shadow(0 1px 4px #9e7e15aa);
 }
 .desktop-only { display: inline; }
 .mobile-only { display: none; }
