@@ -11,7 +11,6 @@ html, body {
   font-family: 'Segoe UI', Arial, sans-serif;
   box-sizing: border-box;
 }
-
 /* VIDEO DE FUNDO */
 .video-bg {
   position: fixed;
@@ -100,6 +99,9 @@ html, body {
   flex-wrap: wrap;
   text-align: center;
 }
+.reviews-social-proof .stars {
+  color: #FFD700;
+}
 .desktop-only { display: inline; }
 .mobile-only { display: none; }
 @media (max-width: 700px) {
@@ -119,7 +121,6 @@ html, body {
     overflow-wrap: anywhere;
   }
 }
-
 /* REVIEWS GRID */
 .reviews-page .reviews-grid {
   display: flex;
@@ -161,7 +162,6 @@ html, body {
   text-align: left;
   display: block;
 }
-
 /* CTA FINAL */
 .cta-final {
   margin: 48px auto 0 auto;
@@ -196,7 +196,6 @@ html, body {
   color: #2d3947;
   transform: translateY(-2px) scale(1.03);
 }
-
 /* FOOTER */
 .footer {
   text-align: center;
@@ -205,7 +204,6 @@ html, body {
   margin-top: 48px;
   padding: 24px 2px 19px 2px;
 }
-
 /* MOBILE AJUSTES */
 @media (max-width: 700px) {
   .container.reviews-page {
