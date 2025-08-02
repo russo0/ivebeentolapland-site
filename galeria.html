@@ -147,5 +147,12 @@
       <br> Todas as fotos e textos são protegidos por direitos autorais.
     </div>
   </div>
+<script>
+  document.addEventListener('keydown', function(e){
+    if(e.key === "Escape" && window.location.hash.startsWith("#img")){
+      window.location.hash = "#close";
+    }
+  });
+</script>
 </body>
 </html>
