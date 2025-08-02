@@ -100,15 +100,14 @@ html, body {
   text-align: center;
 }
 .reviews-social-proof .stars {
-  /* Gradiente dourado de verdade */
-  background: linear-gradient(90deg, #ffd700 20%, #ffb700 60%, #fff4b1 100%);
+  background: linear-gradient(90deg, #fffbe0, #ffd700 30%, #ffb700 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* Suporte extra */
-  text-fill-color: transparent; /* Suporte extra */
-  font-size: 1.2em;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 1.22em;
   letter-spacing: 2px;
-  filter: drop-shadow(0 1px 4px #9e7e1555);
+  filter: drop-shadow(0 1px 0px #ad880099) drop-shadow(0 0px 2px #68480066);
 }
 .desktop-only { display: inline; }
 .mobile-only { display: none; }
