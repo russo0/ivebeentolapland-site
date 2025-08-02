@@ -231,4 +231,5 @@ html, body {
   .galeria-cta .cta-title { font-size: 1.02em; }
   .galeria-cta .cta-text { font-size: .97em; }
   .galeria-cta .cta-btn-bright { font-size: 0.99em; padding: 11px 0; width: 100%; }
+  .topbar { position: sticky; top: 0; z-index: 9; }
 }
