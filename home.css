@@ -196,7 +196,8 @@ body {
   .home-page .home-profile {
     margin: 0 auto 18px auto !important;
   }
-}
-  .topbar { 
+.topbar { 
    position: sticky; top: 0; z-index: 9; 
+   }
 }
+  
