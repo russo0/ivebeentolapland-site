@@ -422,9 +422,7 @@ html, body {
     margin: 0 auto;
     display: block;
   }
-  .topbar { 
-    position: sticky; top: 0; z-index: 9; 
-  }
+  
 }
 
 /* Pequeno ajuste para evitar scroll lateral */
@@ -485,5 +483,8 @@ html, body {
     font-size: 1em;
     align-items: flex-start;
     text-align: left;
+  }
+.topbar { 
+    position: sticky; top: 0; z-index: 9; 
   }
 }
