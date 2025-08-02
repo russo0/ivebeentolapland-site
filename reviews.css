@@ -107,7 +107,7 @@ html, body {
   text-fill-color: transparent;
   font-size: 1.22em;
   letter-spacing: 2px;
-  filter: drop-shadow(0 1px 0px #ad880099) drop-shadow(0 0px 2px #68480066);
+  filter: drop-shadow(0 2px 6px #613d02) drop-shadow(0 1px 0px #fff8);
 }
 .desktop-only { display: inline; }
 .mobile-only { display: none; }
