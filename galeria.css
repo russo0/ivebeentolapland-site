@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+
+/* === BASE GERAL === */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #111928;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* === CONTAINER PRINCIPAL === */
+.container.galeria-page {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 10px 40px 10px;
+}
+
+/* === TÍTULO & DESCRIÇÃO === */
+.galeria-page .hero-title {
+  text-align: center;
+  font-size: 2.1em;
+  font-weight: 700;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #3ae374 0%, #17c0eb 55%, #7158e2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: .4px;
+}
+.galeria-page .hero-desc {
+  text-align: justify;
+  font-size: 1.13em;
+  color: #e8e8e8;
+  max-width: 670px;
+  margin: 0 auto 16px auto;
+  line-height: 1.6;
+  padding: 0 6px;
+}
+
+/* === GALERIA DE FOTOS === */
+.galeria-page .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 24px;
+  margin: 24px 0 0 0;
+  padding: 0;
+}
+.galeria-page .gallery-item {
+  background: rgba(30, 42, 65, 0.93);
+  border-radius: 18px;
+  box-shadow: 0 3px 18px #0005;
+  overflow: hidden;
+  position: relative;
+  transition: transform .15s, box-shadow .18s;
+  cursor: pointer;
+  z-index: 1;
+}
+.galeria-page .gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform .25s;
+  border-radius: 16px 16px 0 0;
+}
+
+/* === CAPTION DAS FOTOS === */
+.galeria-page .caption {
+  background: rgba(16,32,64,0.42);
+  color: #fff;
+  padding: 12px 8px;
+  font-size: 1em;
+  border-radius: 0 0 14px 14px;
+  text-align: center;
+  font-weight: 600;
+  min-height: 50px;
+  backdrop-filter: blur(5px);
+  transition: opacity 0.18s, background 0.18s, color 0.18s;
+  opacity: 0.85;
+}
+
+/* === EFEITO PREMIUM (HOVER) === */
+.galeria-page .gallery-item:hover,
+.galeria-page .gallery-item:focus-within {
+  transform: scale(1.025) translateY(-3px);
+  box-shadow: 0 12px 38px #1a71e655, 0 1.5px 6px #2ee7c055;
+  z-index: 2;
+}
+.galeria-page .gallery-item:hover img,
+.galeria-page .gallery-item:focus-within img {
+  filter: brightness(1.12) saturate(1.13);
+  transform: scale(1.04);
+}
+.galeria-page .gallery-item:hover .caption,
+.galeria-page .gallery-item:focus-within .caption {
+  opacity: 1;
+  background: linear-gradient(0deg, rgba(30,42,65,0.96) 72%, transparent 100%);
+  color: #ffeaa7;
+  text-shadow: 0 2px 8px #000c;
+  font-family: 'Patua One', serif;
+}
+
+/* === LIGHTBOX (FOTO AMPLIADA) === */
+.galeria-page .lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: linear-gradient(120deg, #181e31ea 65%, #232939ee 100%);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.galeria-page .lightbox:target {
+  display: flex;
+}
+.galeria-page .lightbox img {
+  max-width: 94vw;
+  max-height: 82vh;
+  border-radius: 19px;
+  border: 2.5px solid #17c0eb;
+  box-shadow: 0 10px 38px #000a;
+  margin-bottom: 18px;
+  object-fit: contain;
+  animation: zoomIn 0.33s cubic-bezier(.51,1.3,.33,1.02);
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.88);}
+  to   { opacity: 1; transform: scale(1);}
+}
+.galeria-page .lightbox-caption {
+  color: #fff;
+  background: rgba(25,45,80,0.78);
+  padding: 12px 17px;
+  border-radius: 14px;
+  font-size: 1.13em;
+  font-weight: 600;
+  text-align: center;
+  max-width: 93vw;
+  margin: 0 auto;
+}
+.galeria-page .lightbox .close {
+  position: absolute;
+  top: 21px;
+  right: 38px;
+  color: #fff;
+  font-size: 2.4em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 2;
+}
+.galeria-page .lightbox .close:after {
+  content: "×";
+  font-size: 2.2em;
+  color: #ffae3a;
+  text-shadow: 0 4px 16px #000c;
+  filter: drop-shadow(0 2px 6px #0009);
+  cursor: pointer;
+}
+
+/* === CTA FINAL DA GALERIA === */
+.galeria-cta {
+  margin: 38px auto 20px auto;
+  max-width: 430px;
+  background: linear-gradient(90deg, #17c0eb 0%, #3ae374 100%);
+  border-radius: 19px;
+  box-shadow: 0 3px 22px #13efb295, 0 1px 2px #0002;
+  padding: 22px 18px 20px 18px;
+  text-align: center;
+  color: #122449;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.galeria-cta .cta-title {
+  font-size: 1.17em;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: 0.2px;
+  color: #122449;
+}
+.galeria-cta .cta-text {
+  font-size: 1.02em;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #0b2242c9;
+  line-height: 1.5;
+}
+.galeria-cta .cta-btn-bright {
+  display: inline-block;
+  background: linear-gradient(90deg, #124957 0%, #1e887e 100%);
+  color: #fff !important;
+  font-size: 1.08em;
+  padding: 12px 32px;
+  border-radius: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.18s, color 0.18s, transform 0.15s;
+  text-shadow: 0 2px 4px #093b3490;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+.galeria-cta .cta-btn-bright:hover {
+  background: linear-gradient(90deg, #19976a 0%, #31c6ad 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* === FOOTER IGUAL AO RESTO DO SITE === */
+.footer {
+  text-align: center;
+  color: #bbb;
+  font-size: .98em;
+  margin-top: 48px;
+  padding: 24px 2px 19px 2px;
+}
+
+/* === RESPONSIVO MOBILE === */
+@media (max-width: 600px) {
+  .container.galeria-page { padding: 0 2vw 32px 2vw; }
+  .galeria-page .gallery-grid { grid-template-columns: 1fr; gap: 13px; }
+  .galeria-page .gallery-item img { height: 43vw; min-height: 150px; }
+  .galeria-page .caption { font-size: 0.97em; padding: 9px 5px; min-height: 37px;}
+  .galeria-page .hero-title { font-size: 1.22em; }
+  .galeria-page .hero-desc { font-size: 1em; padding: 0 2vw; }
+  .galeria-page .lightbox img { max-width: 97vw; max-height: 63vh;}
+  .galeria-page .lightbox-caption { font-size: 1em; padding: 8px 4vw; }
+  .galeria-page .lightbox .close { top: 12px; right: 12px; font-size: 2em; }
+  .galeria-cta { max-width: 97vw; padding: 17px 4vw 16px 4vw; }
+  .galeria-cta .cta-title { font-size: 1.02em; }
+  .galeria-cta .cta-text { font-size: .97em; }
+  .galeria-cta .cta-btn-bright { font-size: 0.99em; padding: 11px 0; width: 100%; }
+  .topbar { position: sticky; top: 0; z-index: 9; }
+}

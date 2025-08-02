@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+/* ==========================
+   GLOBAL: Topbar, Footer, etc
+   ========================== */
+body {
+  margin: 0;
+  padding: 0;
+  background: #111928;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+/* VIDEO DE FUNDO */
+.video-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.video-bg iframe {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 177.77vh; /* Para 16:9 */
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 56.25vw;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  pointer-events: none;
+  filter: brightness(0.77) blur(0.5px);
+  border: none;
+  background: #000;
+  z-index: 0;
+}
+.video-bg .video-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: linear-gradient(180deg, rgba(9,16,32,0.18) 0%, rgba(9,16,32,0.17) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px 40px 10px;
+  position: relative;
+  z-index: 2;
+}
+/* Footer e CTA padrão */
+.cta-final {
+  margin: 58px auto 0 auto;
+  text-align: center;
+}
+.cta-btn {
+  background: linear-gradient(90deg,#21c287,#14a6ea 60%,#6847d3 100%);
+  color: #fff;
+  border: none;
+  font-size: 1.19em;
+  padding: 14px 38px;
+  border-radius: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 18px #111a;
+  transition: opacity .2s, transform .18s;
+  margin-top: 18px;
+  display: inline-block;
+}
+.cta-btn:hover { opacity:0.9; transform:scale(1.03) translateY(-2px); }
+.footer {
+  text-align: center;
+  color: #bbb;
+  font-size: .98em;
+  margin-top: 48px;
+  padding: 24px 2px 19px 2px;
+}
+
+/* ==========================
+   HOME PAGE EXCLUSIVO
+   ========================== */
+.home-page .home-hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 30px 0 18px 0;
+}
+.home-page .home-books {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3vw;
+  width: 100%;
+}
+.home-page .book-cover {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 6px 26px #0008;
+}
+.home-page .home-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 22px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+.home-page .about-photo-img,
+.home-page .profile-pic {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 22px #111b;
+  border: 6px solid #243c62;
+  margin-bottom: 15px;
+}
+.home-page .home-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 410px;
+  margin: 30px auto 20px auto;
+  box-sizing: border-box;
+}
+.home-page .cta-btn-bright {
+  width: 100%;
+  text-align: center;
+  font-size: 1.08em;
+  border-radius: 17px;
+  margin: 0;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #17888f 0%, #37baa9 100%);
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: bold;
+  padding: 17px 8px;
+  box-shadow: 0 4px 16px #0003;
+  border: none;
+  letter-spacing: 0.7px;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  text-shadow: 0 2px 6px #093b3490;
+}
+.home-page .cta-btn-bright:hover {
+  background: linear-gradient(90deg, #31c6ad 0%, #19976a 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+}
+/* Fade-in padrão (pode usar para as capas) */
+.fade-in-fast {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: fadeInAnim 2s cubic-bezier(.57,.17,.14,1.04) forwards;
+}
+@keyframes fadeInAnim {
+  from { opacity: 0; transform: translateY(28px);}
+  to   { opacity: 1; transform: none;}
+}
+/* Fade-in mais lento (pode usar para sua foto) */
+.fade-in-slow {
+  opacity: 0;
+  transform: scale(0.94) translateY(34px);
+  animation: fadeInProfile 4s cubic-bezier(.57,.17,.14,1.04) forwards;
+}
+@keyframes fadeInProfile {
+  from { opacity: 0; transform: scale(0.94) translateY(34px);}
+  to   { opacity: 1; transform: scale(1) translateY(0);}
+}
+/* ====================
+   MOBILE ADJUSTMENTS 
+   ==================== */
+
+@media (max-width: 700px) {
+  .home-page .home-hero {
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 18px 0 14px 0 !important;
+  }
+  .home-page .home-books {
+    flex-direction: column !important;    /* Troca row para column */
+    gap: 12vw !important;                 /* Espaço vertical entre as capas */
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .home-page .book-cover {
+    max-width: 86vw !important;           /* Capas não vão cortar */
+    width: 100% !important;
+    margin: 0 auto 2vw auto !important;
+    display: block !important;
+  }
+  .home-page .home-profile {
+    margin: 0 auto 18px auto !important;
+  }
+}
+  .topbar { 
+   position: sticky; top: 0; z-index: 9; 
+}
