@@ -486,4 +486,5 @@ html, body {
     align-items: flex-start;
     text-align: left;
   }
+  .topbar { position: sticky; top: 0; z-index: 9; }
 }
